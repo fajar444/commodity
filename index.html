@@ -586,13 +586,9 @@ html,body{overflow-x:hidden;max-width:100vw;}
   .neg-card [style*="display:flex"],
   .post-card [style*="display:flex"]{flex-wrap:wrap;}
 
-  /* ── Market preview & AI signal text clip ── */
-  #market-previews > div, #home-ai-signals > div{
-    max-width:100%;overflow:hidden;
-  }
-  #market-previews .name, #home-ai-signals .name{
-    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;
-  }
+  /* ── Market preview & AI signal — let content wrap naturally ── */
+  #market-previews > div{ overflow:visible; }
+  #home-ai-signals > div{ overflow:visible; padding:11px 12px; }
 
   /* ── Wallet quick actions stay 4-col ── */
   #view-wallet [style*="repeat(4,1fr)"]{grid-template-columns:repeat(4,1fr) !important;}
@@ -710,10 +706,9 @@ body,html{overflow-x:hidden;}
 .home-2col-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;min-width:0;}
 @media(max-width:700px){
   .home-2col-grid{grid-template-columns:1fr !important;}
-  /* Market previews: compact row */
-  #market-previews > div{padding:8px 10px;}
-  /* AI signals: compact */
-  #home-ai-signals > div{padding:8px 10px;}
+  /* Market preview & AI signals compact */
+  #market-previews > div{ padding:10px 12px; }
+  #home-ai-signals > div{ padding:11px 12px; }
   /* Filter bar scrolls horizontally on mobile */
   .filter-bar{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none;}
   .filter-bar::-webkit-scrollbar{display:none;}
@@ -3538,13 +3533,15 @@ async function renderHome() {
       { name:'Karet TSR20', signal:'BELI', cls:'dn', icon:'mdi-leaf', desc:'Harga tertekan sementara. Beli untuk kontrak jangka panjang.', color:'#dc2626' },
     ];
     signals.innerHTML = data.map(d => `
-      <div style="display:flex;align-items:center;gap:9px;padding:9px 11px;background:var(--paper);border-radius:10px;border:1px solid var(--border);cursor:pointer;overflow:hidden" onclick="navigate('market-analysis')">
-        <div style="width:28px;height:28px;border-radius:7px;background:${d.color}18;display:flex;align-items:center;justify-content:center;flex-shrink:0"><span class="mdi ${d.icon}" style="color:${d.color};font-size:14px"></span></div>
-        <div style="flex:1;min-width:0;overflow:hidden">
-          <div style="font-size:11px;font-weight:800;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${d.name}</div>
-          <div style="font-size:10px;color:var(--ink-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${d.desc}</div>
+      <div style="display:flex;align-items:flex-start;gap:10px;padding:11px 12px;background:var(--paper);border-radius:10px;border:1px solid var(--border);cursor:pointer;position:relative" onclick="navigate('market-analysis')">
+        <div style="width:32px;height:32px;border-radius:8px;background:${d.color}18;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">
+          <span class="mdi ${d.icon}" style="color:${d.color};font-size:15px"></span>
         </div>
-        <span style="background:${d.color}15;color:${d.color};font-size:10px;font-weight:800;padding:2px 7px;border-radius:5px;flex-shrink:0;white-space:nowrap">${d.signal}</span>
+        <div style="flex:1;min-width:0;padding-right:48px">
+          <div style="font-size:12px;font-weight:800;color:var(--ink);line-height:1.3;margin-bottom:3px">${d.name}</div>
+          <div style="font-size:11px;color:var(--ink-3);line-height:1.5;word-break:break-word">${d.desc}</div>
+        </div>
+        <span style="position:absolute;top:11px;right:12px;background:${d.color};color:#fff;font-size:10px;font-weight:900;padding:3px 9px;border-radius:6px;letter-spacing:.5px;white-space:nowrap">${d.signal}</span>
       </div>
     `).join('');
   }
@@ -3595,16 +3592,16 @@ async function loadMarketPreviews() {
       const max = Math.max(...t.history), min = Math.min(...t.history), range = max-min||1;
       const points = t.history.map((h,i)=>`${(i/(t.history.length-1))*80+10},${45-((h-min)/range)*35}`).join(' ');
       const priceStr = t.current > 100 ? `$${t.current.toLocaleString()}` : `$${t.current.toFixed(2)}`;
-      return `<div style="display:flex;align-items:center;gap:10px;padding:9px 12px;background:var(--paper);border-radius:10px;border:1px solid var(--border);cursor:pointer;overflow:hidden;" onclick="navigate('market-analysis')">
-        <div style="width:28px;height:28px;border-radius:7px;background:${t.change>=0?'#dcfce7':'#fee2e2'};display:flex;align-items:center;justify-content:center;flex-shrink:0">
-          <span class="mdi mdi-${micon}" style="color:${cls};font-size:14px"></span>
+      return `<div style="display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--paper);border-radius:10px;border:1px solid var(--border);cursor:pointer" onclick="navigate('market-analysis')">
+        <div style="width:32px;height:32px;border-radius:8px;background:${t.change>=0?'#dcfce7':'#fee2e2'};display:flex;align-items:center;justify-content:center;flex-shrink:0">
+          <span class="mdi mdi-${micon}" style="color:${cls};font-size:16px"></span>
         </div>
-        <div style="flex:1;min-width:0;overflow:hidden">
-          <div style="font-size:12px;font-weight:800;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${t.name}</div>
-          <div style="font-family:var(--ff-mono);font-size:11px;font-weight:700;color:${cls}">${priceStr}</div>
+        <div style="flex:1;min-width:0">
+          <div style="font-size:13px;font-weight:800;color:var(--ink);line-height:1.3">${t.name}</div>
+          <div style="font-family:var(--ff-mono);font-size:12px;font-weight:700;color:${cls};margin-top:1px">${priceStr}</div>
         </div>
-        <div style="font-size:11px;font-weight:800;color:${cls};display:flex;align-items:center;gap:2px;flex-shrink:0;white-space:nowrap">
-          <span class="mdi ${icon}" style="font-size:12px"></span>${Math.abs(t.change)}%
+        <div style="font-size:12px;font-weight:800;color:${cls};display:flex;align-items:center;gap:2px;flex-shrink:0;white-space:nowrap;margin-left:4px">
+          <span class="mdi ${icon}" style="font-size:13px"></span>${Math.abs(t.change)}%
         </div>
       </div>`;
     }).join('');
