@@ -2880,8 +2880,8 @@ body,html{overflow-x:hidden;}
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ═══ STATE ═══
-let token = localStorage.getItem('cx_token')||'';
-let user  = JSON.parse(localStorage.getItem('cx_user')||'null');
+let token = localStorage.getItem('lr_token')||'';
+let user  = JSON.parse(localStorage.getItem('lr_user')||'null');
 let currentView = 'home';
 let _prevView   = 'marketplace';
 let allProducts = [];
@@ -2889,7 +2889,7 @@ let allServices = [];
 let selectedLogisticsProvider = 'jne';
 
 // Currency State
-let selectedCurrency = JSON.parse(localStorage.getItem('cx_currency') || '{"code":"IDR", "symbol":"Rp", "rate":15850, "flag":"ID"}');
+let selectedCurrency = JSON.parse(localStorage.getItem('lr_currency') || '{"code":"IDR", "symbol":"Rp", "rate":15850, "flag":"ID"}');
 let currencyRates = {};
 
 const EMOJI = {}; // deprecated - use MICON
@@ -2897,7 +2897,7 @@ const MICON = {Coffee:'mdi-coffee',Cocoa:'mdi-food-variant','Palm Oil':'mdi-palm
 const _SVC_ICONS={freight:'mdi-ferry',warehouse:'mdi-warehouse',packaging:'mdi-package-variant-closed',inspection:'mdi-magnify-scan',container:'mdi-train-car-container',insurance:'mdi-shield-check',certification:'mdi-certificate-outline',airplane:'mdi-airplane'};
 
 // ═══ DATA LOADER ═══
-// Priority: 1) fetch commodix-data.json (works on http/https)
+// Priority: 1) fetch loori-data.json (works on http/https)
 //           2) inline bundled data (works on file://)
 
 // Inline bundled data — always available as fallback
@@ -2911,12 +2911,12 @@ async function loadMockDB() {
     if (location.protocol === 'file:') {
       throw new Error('file:// — menggunakan data inline');
     }
-    const r = await fetch('commodix-data.json');
+    const r = await fetch('loori-data.json');
     if (r.ok) {
       MOCK_DB = await r.json();
-      console.log('[Loori] Data dimuat dari commodix-data.json (' + location.protocol + ')');
+      console.log('[Loori] Data dimuat dari loori-data.json (' + location.protocol + ')');
     } else {
-      throw new Error('commodix-data.json tidak ditemukan (' + r.status + ')');
+      throw new Error('loori-data.json tidak ditemukan (' + r.status + ')');
     }
   } catch(e) {
     // Use bundled inline data
@@ -3252,14 +3252,14 @@ async function api(path, opts={}) {
 
 // Fix user state from localStorage on load
 function _restoreUser() {
-  const stored = localStorage.getItem('cx_user');
+  const stored = localStorage.getItem('lr_user');
   if (stored) {
     try {
       const su = JSON.parse(stored);
       // Guard: MOCK_DB may not be loaded yet (e.g. page refresh before DOMContentLoaded)
       _mockUser = (MOCK_DB && MOCK_DB.users) ? (MOCK_DB.users.find(u => u.id === su.id) || su) : su;
     } catch(e) {
-      localStorage.removeItem('cx_user');
+      localStorage.removeItem('lr_user');
     }
   }
 }
@@ -3286,7 +3286,7 @@ async function doLogin(e) {
   try {
     const r = await api('/api/auth/login',{method:'POST',body:JSON.stringify({email:document.getElementById('login-email').value,password:document.getElementById('login-pwd').value})});
     token=r.token; user=r.user;
-    localStorage.setItem('cx_token',token); localStorage.setItem('cx_user',JSON.stringify(user));
+    localStorage.setItem('lr_token',token); localStorage.setItem('lr_user',JSON.stringify(user));
     startApp();
   } catch(err){showToast(err.message,'error');}
 }
@@ -3295,13 +3295,13 @@ async function doRegister(e) {
   try {
     const r = await api('/api/auth/register',{method:'POST',body:JSON.stringify({name:document.getElementById('reg-name').value,email:document.getElementById('reg-email').value,password:document.getElementById('reg-pwd').value})});
     token=r.token; user=r.user;
-    localStorage.setItem('cx_token',token); localStorage.setItem('cx_user',JSON.stringify(user));
+    localStorage.setItem('lr_token',token); localStorage.setItem('lr_user',JSON.stringify(user));
     startApp();
   } catch(err){showToast(err.message,'error');}
 }
 function doLogout() {
   token=''; user=null;
-  ['cx_token','cx_user','cx_mode','cx_currency'].forEach(k=>localStorage.removeItem(k));
+  ['lr_token','lr_user','lr_mode','lr_currency'].forEach(k=>localStorage.removeItem(k));
   document.getElementById('main-app').classList.remove('visible');
   document.getElementById('landing-page').classList.add('visible');
   document.getElementById('auth-screen').classList.remove('visible');
@@ -3369,7 +3369,7 @@ function selectCurrency(code) {
   const c = currencyRates[code];
   if(!c) return;
   selectedCurrency = {code: c.code, symbol: c.symbol, rate: c.rate, flag: c.flag};
-  localStorage.setItem('cx_currency', JSON.stringify(selectedCurrency));
+  localStorage.setItem('lr_currency', JSON.stringify(selectedCurrency));
   updateCurrencyUI();
   toggleCurrencyDropdown();
   // Refresh views that have prices
@@ -5489,7 +5489,7 @@ async function saveProfile(){
   try{
     await api('/api/profile',{method:'PUT',body:JSON.stringify(data)});
     user = {...user, ...data};
-    localStorage.setItem('cx_user', JSON.stringify(user));
+    localStorage.setItem('lr_user', JSON.stringify(user));
     showToast('Profil disimpan!','success');
   }catch(e){showToast(e.message,'error');}
 }
@@ -5701,7 +5701,7 @@ function setMode(mode) {
   document.documentElement.style.setProperty('--mode-3', isExport ? 'var(--exp-3)' : 'var(--dom-3)');
   document.documentElement.style.setProperty('--mode-glow', isExport ? 'var(--exp-glow)' : 'var(--dom-glow)');
   document.body.classList.toggle('mode-export', isExport);
-  localStorage.setItem('cx_mode', mode);
+  localStorage.setItem('lr_mode', mode);
   startApp();
 }
 
