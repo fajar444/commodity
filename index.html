@@ -3396,8 +3396,11 @@ document.addEventListener('click', (e) => {
 });
 
 function updateCurrencyUI() {
-  document.getElementById('current-currency-flag').textContent = selectedCurrency.flag;
-  document.getElementById('current-currency-code').textContent = selectedCurrency.code;
+  // Guard: elements may not exist on all pages
+  const flagEl = document.getElementById('current-currency-flag');
+  const codeEl = document.getElementById('current-currency-code');
+  if (flagEl) flagEl.textContent = selectedCurrency.flag || selectedCurrency.code || '';
+  if (codeEl) codeEl.textContent = selectedCurrency.code || 'IDR';
 }
 
 function formatPrice(usdPrice) {
