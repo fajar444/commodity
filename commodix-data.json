@@ -789,31 +789,51 @@
     "1": [
       {
         "notif_id": 1,
-        "title": "Tawaran Baru Diterima",
-        "body": "Frankfurt Kaffee GmbH menawarkan $4.00/kg untuk Kopi Robusta 20 ton",
+        "title": "Tawaran Baru Masuk",
+        "body": "Frankfurt Kaffee GmbH menawarkan $4.00/kg untuk Kopi Robusta 20 ton. Tawaran ini 6.9% di bawah harga listing Anda.",
+        "type": "offer",
         "read_status": false,
-        "created_at": "2025-03-12T10:30:00"
+        "created_at": "2025-03-12T10:30:00Z"
       },
       {
         "notif_id": 2,
-        "title": "Pesanan Dikonfirmasi",
-        "body": "ORD-2025-002 sedang dalam pengiriman ke Jerman",
+        "title": "Pesanan Dalam Pengiriman",
+        "body": "ORD-2025-002 (Kopi Robusta 10 ton) sedang dikirim ke Frankfurt, Jerman. Estimasi tiba 28 Maret 2025.",
+        "type": "order",
         "read_status": false,
-        "created_at": "2025-03-10T14:00:00"
+        "created_at": "2025-03-10T14:00:00Z"
       },
       {
         "notif_id": 3,
-        "title": "Tender Baru Sesuai Produk Anda",
-        "body": "Tender Kopi Arabika dari Amsterdam Coffee Roasters tersedia",
+        "title": "Tender Baru Cocok Produk Anda",
+        "body": "Amsterdam Coffee Roasters mencari Kopi Arabika 120 ton/tahun. Budget $900,000. Deadline 15 April 2025.",
+        "type": "tender",
         "read_status": false,
-        "created_at": "2025-03-09T09:00:00"
+        "created_at": "2025-03-09T09:00:00Z"
       },
       {
         "notif_id": 4,
-        "title": "AI Price Alert",
-        "body": "Harga lada hitam naik 3.2% — Waktu ideal untuk listing baru",
+        "title": "AI Price Alert — Kopi Robusta",
+        "body": "Harga Kopi Robusta naik 5.1% ke $4.30/kg. ICE London di posisi 4-year high. Waktu optimal untuk listing baru.",
+        "type": "price",
         "read_status": true,
-        "created_at": "2025-03-08T08:00:00"
+        "created_at": "2025-03-08T08:00:00Z"
+      },
+      {
+        "notif_id": 5,
+        "title": "Pesan Baru dari Yamamoto Trading",
+        "body": "Yamamoto Trading Co. mengirim pesan baru tentang order Lada Hitam 5 ton.",
+        "type": "chat",
+        "read_status": true,
+        "created_at": "2025-03-07T15:30:00Z"
+      },
+      {
+        "notif_id": 6,
+        "title": "Negosiasi Counter-Offer Diterima",
+        "body": "Counter-offer $4.15/kg untuk Kopi Robusta dari Frankfurt Kaffee GmbH telah diterima. Siap proses pembayaran.",
+        "type": "order",
+        "read_status": true,
+        "created_at": "2025-03-06T11:00:00Z"
       }
     ]
   },
