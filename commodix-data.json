@@ -3,2155 +3,473 @@
     {
       "id": 1,
       "name": "Budi Santoso",
-      "email": "demo@commodix.id",
+      "email": "demo@loori.id",
       "password": "demo123",
-      "role": "seller",
+      "role": "multi_role",
+      "role_label": "Multi-Role (Seller + Buyer + Wh + Container + Trucking + Freight)",
+      "roles": ["buyer", "seller", "logistics_provider", "warehouse_provider", "container_provider", "trucking_provider"],
       "avatar": "B",
+      "handle": "@budisantoso_tani",
       "store_id": 1,
-      "balance_usd": 4820.5,
-      "pending_usd": 1200,
+      "balance_account_idr": 125000000,
+      "balance_store_idr": 485000000,
+      "balance_usd": 38400,
+      "pending_usd": 9500,
       "joined": "2023-01-15",
       "phone": "+62 812-3456-7890",
       "province": "Lampung",
-      "city": "Bandar Lampung"
+      "city": "Bandar Lampung",
+      "export_readiness_score": 78,
+      "export_level": "domestic_standard"
     },
     {
       "id": 2,
-      "name": "Admin CommodiX",
-      "email": "admin@commodix.id",
+      "name": "Admin Loori",
+      "email": "admin@loori.id",
       "password": "admin123",
       "role": "admin",
+      "role_label": "Administrator Platform Loori",
+      "roles": ["admin"],
       "avatar": "A",
+      "handle": "@admin_loori",
       "store_id": null,
-      "balance_usd": 98500,
+      "balance_account_idr": 950000000,
+      "balance_store_idr": 0,
+      "balance_usd": 650000,
       "pending_usd": 0,
       "joined": "2022-06-01",
       "phone": "+62 21-5050-8080",
       "province": "DKI Jakarta",
-      "city": "Jakarta Selatan"
+      "city": "Jakarta Selatan",
+      "export_readiness_score": 100,
+      "export_level": "export_active"
+    },
+    {
+      "id": 3,
+      "name": "PT Indofood Sukses Makmur",
+      "email": "buyer@indofood.co.id",
+      "password": "buyer123",
+      "role": "buyer_domestic",
+      "role_label": "Buyer Domestik Industri Pangan",
+      "roles": ["buyer"],
+      "avatar": "I",
+      "handle": "@indofood_procurement",
+      "store_id": null,
+      "balance_account_idr": 2500000000,
+      "balance_store_idr": 0,
+      "balance_usd": 160000,
+      "pending_usd": 25000,
+      "joined": "2023-03-10",
+      "phone": "+62 21-5795-8888",
+      "province": "DKI Jakarta",
+      "city": "Jakarta Selatan",
+      "export_readiness_score": 90,
+      "export_level": "export_ready"
+    },
+    {
+      "id": 4,
+      "name": "Frankfurt Kaffee GmbH",
+      "email": "import@frankfurtkaffee.de",
+      "password": "buyer123",
+      "role": "buyer_global",
+      "role_label": "Buyer Global / Eksportir Eropa (Germany)",
+      "roles": ["buyer_global"],
+      "avatar": "F",
+      "handle": "@frankfurt_kaffee",
+      "store_id": null,
+      "balance_account_idr": 0,
+      "balance_store_idr": 0,
+      "balance_usd": 850000,
+      "pending_usd": 120000,
+      "joined": "2023-08-14",
+      "phone": "+49 69 1234 5678",
+      "province": "Hessen",
+      "city": "Frankfurt am Main",
+      "export_readiness_score": 95,
+      "export_level": "export_active"
+    },
+    {
+      "id": 5,
+      "name": "PERUM BULOG Divre Jatim",
+      "email": "pengadaan@bulog.go.id",
+      "password": "bulog123",
+      "role": "buyer_b2g",
+      "role_label": "Buyer B2G / Lembaga Pangan Nasional",
+      "roles": ["buyer", "b2g"],
+      "avatar": "BL",
+      "handle": "@bulog_jatim",
+      "store_id": null,
+      "balance_account_idr": 15000000000,
+      "balance_store_idr": 0,
+      "balance_usd": 1000000,
+      "pending_usd": 0,
+      "joined": "2022-11-01",
+      "phone": "+62 31-8290-001",
+      "province": "Jawa Timur",
+      "city": "Surabaya",
+      "export_readiness_score": 100,
+      "export_level": "export_active"
+    },
+    {
+      "id": 6,
+      "name": "Samudera Logistics & Shipping",
+      "email": "logistics@samudera.id",
+      "password": "log123",
+      "role": "logistics_partner",
+      "role_label": "Penyedia Freight Forwarder & Sewa Kontainer",
+      "roles": ["logistics_provider", "container_provider"],
+      "avatar": "SL",
+      "handle": "@samudera_logistics",
+      "store_id": null,
+      "balance_account_idr": 1850000000,
+      "balance_store_idr": 620000000,
+      "balance_usd": 240000,
+      "pending_usd": 18000,
+      "joined": "2023-02-20",
+      "phone": "+62 21-5344-880",
+      "province": "DKI Jakarta",
+      "city": "Jakarta Utara",
+      "export_readiness_score": 92,
+      "export_level": "export_ready"
     }
   ],
+
   "stores": [
     {
       "store_id": 1,
       "user_id": 1,
-      "store_name": "Tani Maju Lampung",
-      "description": "Pemasok kopi robusta dan lada hitam premium Lampung. Berpengalaman 12 tahun ekspor ke Eropa dan Timur Tengah.",
+      "store_name": "Tani Maju & Logistik Lampung",
+      "description": "Produsen Kopi Robusta & Lada Hitam Lampung. Juga menyediakan Hub Gudang Cold Storage, Armada Truk Tronton, dan Sewa Kontainer 20ft/40ft.",
       "country": "Indonesia",
       "city": "Bandar Lampung",
       "province": "Lampung",
-      "warehouse_address": "Jl. Lintas Sumatera Km 14, Natar",
-      "avg_rating": 4.8,
-      "total_orders": 234,
+      "warehouse_address": "Jl. Lintas Sumatera Km 14, Natar, Bandar Lampung",
+      "avg_rating": 4.9,
+      "total_orders": 312,
       "market_scope": "both",
       "verified": true,
-      "certifications": [
-        "Phytosanitary",
-        "ISO 22000",
-        "Rainforest Alliance",
-        "SNI"
-      ],
-      "banner": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=800&q=75"
+      "certifications": ["Phytosanitary", "ISO 22000", "Halal MUI", "SNI", "Rainforest Alliance"],
+      "banner": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1200&q=80"
     }
   ],
+
+  "certifications_master": [
+    { "id": "CERT-01", "name": "Phytosanitary Certificate", "category": "Karantina Tumbuhan", "desc": "Sertifikat resmi Karantina Pertanian bebas hama & penyakit untuk komoditas ekspor.", "cost_idr": 1250000, "icon": "mdi-leaf" },
+    { "id": "CERT-02", "name": "Halal MUI / BPJPH", "category": "Legalitas Syariah", "desc": "Sertifikasi kehalalan produk bahan pangan & olahan komoditas.", "cost_idr": 3500000, "icon": "mdi-star-circle-outline" },
+    { "id": "CERT-03", "name": "ISO 22000 Food Safety", "category": "Keamanan Pangan Global", "desc": "Standar manajemen keamanan pangan berskala internasional.", "cost_idr": 12000000, "icon": "mdi-shield-check-outline" },
+    { "id": "CERT-04", "name": "HACCP Certification", "category": "Analisis Bahaya Pangan", "desc": "Sistem pencegahan bahaya kontaminasi pada rantai pasok pangan.", "cost_idr": 8500000, "icon": "mdi-clipboard-check-outline" },
+    { "id": "CERT-05", "name": "Rainforest Alliance", "category": "Keberlanjutan Lingkungan", "desc": "Sertifikasi pertanian berkelanjutan & ramah lingkungan untuk Kopi/Kakao.", "cost_idr": 15000000, "icon": "mdi-tree-outline" },
+    { "id": "CERT-06", "name": "RSPO (Palm Oil)", "category": "Kelapa Sawit Berkelanjutan", "desc": "Standar kelapa sawit ramah lingkungan & bebas deforestasi.", "cost_idr": 25000000, "icon": "mdi-palm-tree" },
+    { "id": "CERT-07", "name": "SNI (Standar Nasional Indonesia)", "category": "Standar Mutu Lokal", "desc": "Standardisasi mutu komoditas sesuai regulasi Kementerian Perdagangan RI.", "cost_idr": 4500000, "icon": "mdi-flag-outline" },
+    { "id": "CERT-08", "name": "Organik Indonesia (Inofice)", "category": "Bebas Pestisida Chemical", "desc": "Sertifikat bebas bahan kimia dan bahan sintetis untuk komoditas organik.", "cost_idr": 6500000, "icon": "mdi-sprout-outline" }
+  ],
+
+  "harvest_calendar": [
+    {"commodity": "Kopi Robusta", "province": "Lampung", "peak_months": "Mei - Agustus", "est_output": "620.000 Ton", "status": "Panen Raya"},
+    {"commodity": "Beras Pandan Wangi", "province": "Jawa Barat (Karawang)", "peak_months": "Maret - Mei", "est_output": "450.000 Ton", "status": "Panen Raya"},
+    {"commodity": "Jagung Pipil", "province": "Jawa Timur (Kediri)", "peak_months": "Februari - April", "est_output": "890.000 Ton", "status": "Panen Awal"},
+    {"commodity": "Lada Hitam", "province": "Lampung", "peak_months": "Juli - September", "est_output": "40.000 Ton", "status": "Panen Raya"},
+    {"commodity": "Kakao Fermentasi", "province": "Sulawesi Barat", "peak_months": "Oktober - Desember", "est_output": "180.000 Ton", "status": "Panen Mendatang"},
+    {"commodity": "Cengkeh & Kayu Manis", "province": "Maluku & Sumatra Barat", "peak_months": "Agustus - Oktober", "est_output": "35.000 Ton", "status": "Panen Awal"},
+    {"commodity": "Mete Gelondong", "province": "Nusa Tenggara Timur", "peak_months": "September - November", "est_output": "55.000 Ton", "status": "Panen Mendatang"},
+    {"commodity": "Kelapa Sawit (TBS)", "province": "Riau & Kaltim", "peak_months": "Sepanjang Tahun", "est_output": "12.500.000 Ton", "status": "Kontinu"}
+  ],
+
   "products": [
     {
-      "product_id": 1,
-      "store_id": 1,
-      "seller_id": 1,
-      "store_name": "Tani Maju Lampung",
-      "title": "Kopi Robusta Lampung Grade 1",
-      "commodity_name": "Coffee",
-      "category": "perkebunan",
-      "price_usd": 4.3,
-      "price_idr": 68000,
-      "ref_price_usd": 4.1,
-      "stock": 80,
-      "min_order": 5,
-      "unit": "kg",
-      "grade": "A",
-      "market_type": "both",
-      "location": "Lampung Barat",
-      "avg_rating": 4.9,
-      "verified": true,
-      "export_ready": true,
-      "description": "Kopi Robusta Lampung grade 1 sortir tangan, kadar air 13%, defect <5%. Cocok untuk espresso blend. Sudah memiliki sertifikat Phytosanitary dan Rainforest Alliance.",
-      "certifications": [
-        "Phytosanitary",
-        "Rainforest Alliance",
-        "ISO 22000"
-      ],
-      "img": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=500&q=75"
+      "product_id": 1, "store_id": 1, "seller_id": 1, "store_name": "Tani Maju & Logistik Lampung",
+      "title": "Kopi Robusta Lampung Grade 1 (Fine Petik Merah)", "commodity_name": "Coffee", "category": "perkebunan",
+      "price_usd": 4.3, "price_idr": 68000, "ref_price_usd": 4.1, "stock": 85, "min_order": 5, "unit": "kg",
+      "grade": "Grade 1 (A+)", "market_type": "both", "location": "Lampung Barat, Lampung",
+      "description": "Kopi Robusta Lampung grade 1 sortir tangan, kadar air 12.5%, defect <3%.",
+      "certifications": ["Phytosanitary", "Halal MUI", "ISO 22000"],
+      "img": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=600&q=80"
     },
     {
-      "product_id": 2,
-      "store_id": 1,
-      "seller_id": 1,
-      "store_name": "Tani Maju Lampung",
-      "title": "Lada Hitam Lampung Premium",
-      "commodity_name": "Pepper",
-      "category": "rempah",
-      "price_usd": 3.85,
-      "price_idr": 61000,
-      "ref_price_usd": 3.9,
-      "stock": 30,
-      "min_order": 1,
-      "unit": "kg",
-      "grade": "A+",
-      "market_type": "both",
-      "location": "Way Kanan, Lampung",
-      "avg_rating": 4.7,
-      "verified": true,
-      "export_ready": true,
-      "description": "Lada hitam Lampung 550 g/L, sortir bersih, kadar minyak atsiri tinggi. Ekspor ke Eropa dan Jepang.",
-      "certifications": [
-        "Phytosanitary",
-        "SPS",
-        "SNI"
-      ],
-      "img": "https://images.unsplash.com/photo-1599909631462-4b0d6461d17f?auto=format&fit=crop&w=500&q=75"
+      "product_id": 2, "store_id": 1, "seller_id": 1, "store_name": "Tani Maju & Logistik Lampung",
+      "title": "Lada Hitam Lampung Premium (Minyak Atsiri Tinggi)", "commodity_name": "Pepper", "category": "rempah",
+      "price_usd": 3.85, "price_idr": 61000, "ref_price_usd": 3.9, "stock": 40, "min_order": 1, "unit": "kg",
+      "grade": "Super 550 g/L", "market_type": "both", "location": "Way Kanan, Lampung",
+      "description": "Lada hitam Lampung kering jemur matahari, 550 g/L, sortir blower bersih.",
+      "certifications": ["Phytosanitary", "Halal MUI", "SNI"],
+      "img": "https://images.unsplash.com/photo-1599909631462-4b0d6461d17f?auto=format&fit=crop&w=600&q=80"
     },
     {
-      "product_id": 3,
-      "store_id": 2,
-      "seller_id": 3,
-      "store_name": "Sawit Nusantara",
-      "title": "CPO Grade Premium",
-      "commodity_name": "Palm Oil",
-      "category": "perkebunan",
-      "price_usd": 895,
-      "price_idr": 14180500,
-      "ref_price_usd": 892,
-      "stock": 5000,
-      "min_order": 100,
-      "unit": "ton",
-      "grade": "A",
-      "market_type": "export",
-      "location": "Dumai, Riau",
-      "avg_rating": 4.6,
-      "verified": true,
-      "export_ready": true,
-      "description": "CPO dengan Free Fatty Acid (FFA) < 3.5%, kadar air < 0.2%. FOB Pelabuhan Dumai. RSPO & ISPO certified.",
-      "certifications": [
-        "RSPO",
-        "ISPO",
-        "ISO 9001"
-      ],
-      "img": "https://images.unsplash.com/photo-1607305387299-a3d9611cd469?auto=format&fit=crop&w=500&q=75"
+      "product_id": 3, "store_id": 2, "seller_id": 3, "store_name": "Sawit Nusantara Riau",
+      "title": "CPO Grade Premium (FFA < 3.5%)", "commodity_name": "Palm Oil", "category": "perkebunan",
+      "price_usd": 895, "price_idr": 14180000, "ref_price_usd": 892, "stock": 5000, "min_order": 50, "unit": "ton",
+      "grade": "Premium Export Grade", "market_type": "export", "location": "Dumai, Riau",
+      "description": "CPO dengan Free Fatty Acid (FFA) < 3.5%, kadar air < 0.15%. RSPO & ISPO certified.",
+      "certifications": ["RSPO", "ISPO", "ISO 9001"],
+      "img": "https://images.unsplash.com/photo-1607305387299-a3d9611cd469?auto=format&fit=crop&w=600&q=80"
     },
     {
-      "product_id": 4,
-      "store_id": 3,
-      "seller_id": 4,
-      "store_name": "Beras Karawang Jaya",
-      "title": "Beras Jasmine Premium Grade A",
-      "commodity_name": "Rice",
-      "category": "pangan",
-      "price_usd": 0.91,
-      "price_idr": 14500,
-      "ref_price_usd": 0.93,
-      "stock": 500,
-      "min_order": 20,
-      "unit": "ton",
-      "grade": "A",
-      "market_type": "domestic",
-      "location": "Karawang, Jawa Barat",
-      "avg_rating": 4.8,
-      "verified": true,
-      "export_ready": false,
-      "description": "Beras jasmine Karawang kualitas premium, wangi, pulen. Tersedia dalam kemasan 25kg dan 50kg.",
-      "certifications": [
-        "SNI",
-        "Halal MUI",
-        "BPOM"
-      ],
-      "img": "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=500&q=75"
+      "product_id": 4, "store_id": 3, "seller_id": 4, "store_name": "Beras Karawang Jaya",
+      "title": "Beras Pandan Wangi Karawang Super", "commodity_name": "Rice", "category": "pangan",
+      "price_usd": 0.92, "price_idr": 14600, "ref_price_usd": 0.93, "stock": 600, "min_order": 10, "unit": "ton",
+      "grade": "Grade A Pandan Wangi", "market_type": "domestic", "location": "Karawang, Jawa Barat",
+      "description": "Beras pandan wangi Karawang kualitas super, wangi alami.",
+      "certifications": ["SNI", "Halal MUI", "BPOM"],
+      "img": "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=600&q=80"
     },
     {
-      "product_id": 5,
-      "store_id": 4,
-      "seller_id": 5,
-      "store_name": "Kakao Sulawesi",
-      "title": "Kakao Fermentasi Sulawesi Grade AA",
-      "commodity_name": "Cocoa",
-      "category": "perkebunan",
-      "price_usd": 3400,
-      "price_idr": 53900000,
-      "ref_price_usd": 3240,
-      "stock": 200,
-      "min_order": 10,
-      "unit": "ton",
-      "grade": "AA",
-      "market_type": "export",
-      "location": "Polewali Mandar, Sulbar",
-      "avg_rating": 4.9,
-      "verified": true,
-      "export_ready": true,
-      "description": "Kakao fermentasi penuh 7 hari, kadar air 7%, biji 1g+.",
-      "certifications": [
-        "Rainforest Alliance",
-        "SPS",
-        "Phytosanitary"
-      ],
-      "img": "https://images.unsplash.com/photo-1550828520-4cb496926fc9?auto=format&fit=crop&w=500&q=75"
+      "product_id": 5, "store_id": 4, "seller_id": 5, "store_name": "Kakao Sulawesi Mandiri",
+      "title": "Biji Kakao Fermentasi Sulawesi Grade AA", "commodity_name": "Cocoa", "category": "perkebunan",
+      "price_usd": 3400, "price_idr": 53900000, "ref_price_usd": 3240, "stock": 250, "min_order": 5, "unit": "ton",
+      "grade": "AA Fermented 7 Days", "market_type": "both", "location": "Polewali Mandar, Sulbar",
+      "description": "Kakao fermentasi penuh 7 hari, kadar air 7%, biji 100+ per 100g.",
+      "certifications": ["Rainforest Alliance", "Phytosanitary", "Halal MUI"],
+      "img": "https://images.unsplash.com/photo-1550828520-4cb496926fc9?auto=format&fit=crop&w=600&q=80"
     },
     {
-      "product_id": 6,
-      "store_id": 5,
-      "seller_id": 6,
-      "store_name": "Karet Sumatra",
-      "title": "TSR20 Karet Alam Grade 1",
-      "commodity_name": "Rubber",
-      "category": "perkebunan",
-      "price_usd": 1560,
-      "price_idr": 24726000,
-      "ref_price_usd": 1560,
-      "stock": 300,
-      "min_order": 20,
-      "unit": "ton",
-      "grade": "1",
-      "market_type": "export",
-      "location": "Palembang, Sumsel",
-      "avg_rating": 4.5,
-      "verified": true,
-      "export_ready": true,
-      "description": "Technical Specified Rubber grade 20, impurities < 0.20%.",
-      "certifications": [
-        "SNI",
-        "Phytosanitary"
-      ],
-      "img": "https://images.unsplash.com/photo-1621506820590-6c39f3c44e4f?auto=format&fit=crop&w=500&q=75"
+      "product_id": 6, "store_id": 5, "seller_id": 6, "store_name": "Jagung Pakan Kediri",
+      "title": "Jagung Pipil Kering Pakan Ternak", "commodity_name": "Corn", "category": "pangan",
+      "price_usd": 0.27, "price_idr": 4250, "ref_price_usd": 0.26, "stock": 1200, "min_order": 20, "unit": "ton",
+      "grade": "Grade A Pakan", "market_type": "domestic", "location": "Kediri, Jawa Timur",
+      "description": "Jagung pipil pakan ternak kadar air <14%, aflatoksin <20ppb.",
+      "certifications": ["SNI", "Kementan Approved"],
+      "img": "https://images.unsplash.com/photo-1551754655-cd27e38d2076?auto=format&fit=crop&w=600&q=80"
     },
     {
-      "product_id": 7,
-      "store_id": 6,
-      "seller_id": 7,
-      "store_name": "Jagung Makmur",
-      "title": "Jagung Pipil Kering Grade A",
-      "commodity_name": "Corn",
-      "category": "pangan",
-      "price_usd": 0.27,
-      "price_idr": 4200,
-      "ref_price_usd": 0.26,
-      "stock": 1000,
-      "min_order": 50,
-      "unit": "ton",
-      "grade": "A",
-      "market_type": "domestic",
-      "location": "Malang, Jawa Timur",
-      "avg_rating": 4.6,
-      "verified": true,
-      "export_ready": false,
-      "description": "Jagung pipil kering kadar air <14%, aflatoksin <20ppb.",
-      "certifications": [
-        "SNI",
-        "BPOM"
-      ],
-      "img": "https://images.unsplash.com/photo-1551754655-cd27e38d2076?auto=format&fit=crop&w=500&q=75"
+      "product_id": 7, "store_id": 6, "seller_id": 1, "store_name": "Tani Maju & Logistik Lampung",
+      "title": "Kayu Manis Korintje AA Stick (Kerinci)", "commodity_name": "Cinnamon", "category": "rempah",
+      "price_usd": 6.8, "price_idr": 108000, "ref_price_usd": 6.5, "stock": 15, "min_order": 1, "unit": "kg",
+      "grade": "Korintje AA Stick 8cm", "market_type": "both", "location": "Kerinci / Lampung Hub",
+      "description": "Kayu manis Korintje AA stick kering sempurna, aromatik tinggi untuk ekspor.",
+      "certifications": ["Phytosanitary", "Halal MUI", "Organik"],
+      "img": "https://images.unsplash.com/photo-1509358271058-acd02cc93858?auto=format&fit=crop&w=600&q=80"
     },
     {
-      "product_id": 8,
-      "store_id": 7,
-      "seller_id": 8,
-      "store_name": "Kopi Arabika Gayo",
-      "title": "Kopi Arabika Gayo Premium",
-      "commodity_name": "Coffee",
-      "category": "perkebunan",
-      "price_usd": 7.5,
-      "price_idr": 118750,
-      "ref_price_usd": 7.2,
-      "stock": 25,
-      "min_order": 1,
-      "unit": "kg",
-      "grade": "Specialty",
-      "market_type": "both",
-      "location": "Bener Meriah, Aceh",
-      "avg_rating": 5.0,
-      "verified": true,
-      "export_ready": true,
-      "description": "Arabika Gayo single origin, elevation 1400m+, proses natural/honey. Skor cupping 87+.",
-      "certifications": [
-        "Organic IFOAM",
-        "Rainforest Alliance",
-        "Fair Trade"
-      ],
-      "img": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=500&q=75"
-    },
-    {
-      "product_id": 9,
-      "store_id": 8,
-      "seller_id": 9,
-      "store_name": "Udang Vaname Lampung",
-      "title": "Udang Vaname Fresh Grade A",
-      "commodity_name": "Shrimp",
-      "category": "perikanan",
-      "price_usd": 5.4,
-      "price_idr": 85500,
-      "ref_price_usd": 5.2,
-      "stock": 50,
-      "min_order": 1,
-      "unit": "kg",
-      "grade": "A",
-      "market_type": "both",
-      "location": "Tulang Bawang, Lampung",
-      "avg_rating": 4.7,
-      "verified": true,
-      "export_ready": true,
-      "description": "Udang vaname segar size 30-40, ABF (Antibiotics Free), bebas EMS.",
-      "certifications": [
-        "SKP KKP",
-        "HACCP",
-        "SPS"
-      ],
-      "img": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=500&q=75"
-    },
-    {
-      "product_id": 10,
-      "store_id": 9,
-      "seller_id": 10,
-      "store_name": "Gula Aren Organik",
-      "title": "Gula Aren Organik NTB",
-      "commodity_name": "Sugar",
-      "category": "pangan",
-      "price_usd": 2.2,
-      "price_idr": 34500,
-      "ref_price_usd": 2.1,
-      "stock": 15,
-      "min_order": 1,
-      "unit": "kg",
-      "grade": "Organic",
-      "market_type": "both",
-      "location": "Lombok, NTB",
-      "avg_rating": 4.8,
-      "verified": true,
-      "export_ready": true,
-      "description": "Gula aren organik dari petani kecil NTB. GI > 35, wangi karamel alami.",
-      "certifications": [
-        "Organik Indonesia",
-        "Fair Trade",
-        "Halal MUI"
-      ],
-      "img": "https://images.unsplash.com/photo-1559181567-c3190ca9be46?auto=format&fit=crop&w=500&q=75"
-    },
-    {
-      "product_id": 11,
-      "store_id": 10,
-      "seller_id": 11,
-      "store_name": "Kedelai Magelang",
-      "title": "Kedelai Lokal Grade A",
-      "commodity_name": "Soybean",
-      "category": "pangan",
-      "price_usd": 0.49,
-      "price_idr": 7800,
-      "ref_price_usd": 0.5,
-      "stock": 200,
-      "min_order": 10,
-      "unit": "ton",
-      "grade": "A",
-      "market_type": "domestic",
-      "location": "Magelang, Jawa Tengah",
-      "avg_rating": 4.5,
-      "verified": false,
-      "export_ready": false,
-      "description": "Kedelai lokal kadar protein 36%, bebas GMO.",
-      "certifications": [
-        "SNI",
-        "Non-GMO"
-      ],
-      "img": "https://images.unsplash.com/photo-1562517634-d3e4d5b7def3?auto=format&fit=crop&w=500&q=75"
-    },
-    {
-      "product_id": 12,
-      "store_id": 11,
-      "seller_id": 12,
-      "store_name": "Nikel Halmahera",
-      "title": "Nickel Ore Saprolit NI 1.8%+",
-      "commodity_name": "Nickel",
-      "category": "tambang",
-      "price_usd": 16200,
-      "price_idr": 256770000,
-      "ref_price_usd": 15800,
-      "stock": 10000,
-      "min_order": 1000,
-      "unit": "ton",
-      "grade": "Saprolit",
-      "market_type": "export",
-      "location": "Halmahera, Maluku Utara",
-      "avg_rating": 4.4,
-      "verified": true,
-      "export_ready": true,
-      "description": "Nickel ore saprolit kadar Ni ≥1.8%, Fe ≤18%. FOB Pelabuhan Halmahera.",
-      "certifications": [
-        "RKAB KemenESDM",
-        "IUP Operasi Produksi"
-      ],
-      "img": "https://images.unsplash.com/photo-1564069114551-7a949d6b0e24?auto=format&fit=crop&w=500&q=75"
+      "product_id": 8, "store_id": 7, "seller_id": 2, "store_name": "Rempah Maluku Utama",
+      "title": "Cengkeh Banda Kering Kepala Utuh", "commodity_name": "Cloves", "category": "rempah",
+      "price_usd": 8.5, "price_idr": 135000, "ref_price_usd": 8.2, "stock": 30, "min_order": 2, "unit": "kg",
+      "grade": "Super AB6 Clove", "market_type": "export", "location": "Banda Neira, Maluku",
+      "description": "Cengkeh asli kepulauan Banda, kadar air <10%, minyak tinggi tanpa tangkai.",
+      "certifications": ["Phytosanitary", "ISO 22000"],
+      "img": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=600&q=80"
     }
   ],
-  "services": [
-    {
-      "service_id": 1,
-      "name": "Sewa Gudang Berpendingin",
-      "type": "warehouse",
-      "provider": "ColdStore Nusantara",
-      "price_idr": 15000,
-      "price_usd": null,
-      "unit": "ton/bulan",
-      "icon": "warehouse",
-      "description": "Gudang cold storage 0-8°C, kapasitas 500 ton, CCTV 24 jam"
-    },
-    {
-      "service_id": 2,
-      "name": "Container 20 Feet",
-      "type": "container",
-      "provider": "Samudera Indonesia",
-      "price_idr": null,
-      "price_usd": 1200,
-      "unit": "per kontainer",
-      "icon": "train-car-container",
-      "description": "Container dry 20ft FCL, door-to-port, termasuk trucking lokal"
-    },
-    {
-      "service_id": 3,
-      "name": "Container 40 Feet HC",
-      "type": "container",
-      "provider": "Samudera Indonesia",
-      "price_idr": null,
-      "price_usd": 2000,
-      "unit": "per kontainer",
-      "icon": "train-car-container",
-      "description": "Container High Cube 40ft FCL, ideal untuk volume besar"
-    },
-    {
-      "service_id": 4,
-      "name": "Ocean Freight Asia",
-      "type": "freight",
-      "provider": "Maersk Line",
-      "price_idr": null,
-      "price_usd": 950,
-      "unit": "per TEU",
-      "icon": "ferry",
-      "description": "Pengiriman laut ke China, Jepang, Korea, India - 7-18 hari"
-    },
-    {
-      "service_id": 5,
-      "name": "Ocean Freight Eropa",
-      "type": "freight",
-      "provider": "MSC Shipping",
-      "price_idr": null,
-      "price_usd": 2200,
-      "unit": "per TEU",
-      "icon": "ferry",
-      "description": "Pengiriman laut ke Eropa via Suez Canal - 25-30 hari"
-    },
-    {
-      "service_id": 6,
-      "name": "Air Freight Express",
-      "type": "freight",
-      "provider": "Garuda Cargo",
-      "price_idr": 95000,
-      "price_usd": null,
-      "unit": "per kg",
-      "icon": "airplane",
-      "description": "Pengiriman udara ke seluruh dunia - 2-4 hari"
-    },
-    {
-      "service_id": 7,
-      "name": "Asuransi Marine Cargo",
-      "type": "insurance",
-      "provider": "Asuransi Jasa Indonesia",
-      "price_idr": null,
-      "price_usd": 0.5,
-      "unit": "% nilai kargo",
-      "icon": "shield-check",
-      "description": "All Risk Marine Insurance, klaim otomatis dengan dokumentasi digital"
-    },
-    {
-      "service_id": 8,
-      "name": "Inspeksi Kualitas SGS",
-      "type": "inspection",
-      "provider": "SGS Indonesia",
-      "price_idr": 2500000,
-      "price_usd": null,
-      "unit": "per inspeksi",
-      "icon": "magnify-scan",
-      "description": "Inspeksi fisik, lab test, dan sertifikasi grade oleh surveyor independen"
-    },
-    {
-      "service_id": 9,
-      "name": "Pengurusan Phytosanitary",
-      "type": "certification",
-      "provider": "BBKP Kementan",
-      "price_idr": 500000,
-      "price_usd": null,
-      "unit": "per permohonan",
-      "icon": "certificate-outline",
-      "description": "Sertifikat karantina tumbuhan, proses 2-3 hari kerja"
-    },
-    {
-      "service_id": 10,
-      "name": "Sertifikasi Halal MUI",
-      "type": "certification",
-      "provider": "LPPOM MUI",
-      "price_idr": 5000000,
-      "price_usd": null,
-      "unit": "per produk",
-      "icon": "certificate-outline",
-      "description": "Sertifikat halal resmi MUI, berlaku 2 tahun"
-    },
-    {
-      "service_id": 11,
-      "name": "Pengemasan Ekspor",
-      "type": "packaging",
-      "provider": "PackPro Indonesia",
-      "price_idr": 350000,
-      "price_usd": null,
-      "unit": "per ton",
-      "icon": "package-variant-closed",
-      "description": "Pengemasan sesuai standar ekspor: vacuum, karung goni, drum, peti"
-    },
-    {
-      "service_id": 12,
-      "name": "Sertifikasi Organik IFOAM",
-      "type": "certification",
-      "provider": "Inofice",
-      "price_idr": 8000000,
-      "price_usd": null,
-      "unit": "per produk/tahun",
-      "icon": "leaf",
-      "description": "Sertifikat organik internasional, diakui di Eropa, Amerika, Australia"
-    }
+
+  "gis_regions": [
+    { "region_id": "18", "name": "Lampung", "center_lat": -4.85, "center_lng": 105.05, "status": "surplus", "top_commodity": "Kopi Robusta & Lada", "surplus_vol": "620 Ton", "avg_price_diff": "-8%", "active_listings": 24, "ports": ["Pelabuhan Panjang"] },
+    { "region_id": "33", "name": "Jawa Tengah", "center_lat": -7.15, "center_lng": 110.14, "status": "surplus", "top_commodity": "Beras & Jagung", "surplus_vol": "450 Ton", "avg_price_diff": "-6%", "active_listings": 18, "ports": ["Tanjung Emas Semarang"] },
+    { "region_id": "31", "name": "DKI Jakarta", "center_lat": -6.2, "center_lng": 106.84, "status": "deficit", "top_commodity": "Konsumsi Pangan", "surplus_vol": "0 Ton", "avg_price_diff": "+12%", "active_listings": 4, "ports": ["Tanjung Priok"] },
+    { "region_id": "35", "name": "Jawa Timur", "center_lat": -7.53, "center_lng": 112.23, "status": "surplus", "top_commodity": "Jagung & Kedelai", "surplus_vol": "890 Ton", "avg_price_diff": "-5%", "active_listings": 31, "ports": ["Tanjung Perak Surabaya"] }
   ],
-  "wallet": {
-    "1": {
-      "balance_usd": 4820.5,
-      "pending_usd": 1200,
-      "transactions": [
-        {
-          "tx_id": 1,
-          "type": "topup",
-          "amount": 5000,
-          "description": "Top Up Saldo via Transfer Bank",
-          "created_at": "2025-03-01"
-        },
-        {
-          "tx_id": 2,
-          "type": "withdraw",
-          "amount": 430,
-          "description": "Pendapatan Ekspor - ORD-2025-002",
-          "created_at": "2025-03-10"
-        },
-        {
-          "tx_id": 3,
-          "type": "topup",
-          "amount": 82,
-          "description": "Pendapatan Ekspor - ORD-2024-099",
-          "created_at": "2024-11-25"
-        },
-        {
-          "tx_id": 4,
-          "type": "withdraw",
-          "amount": 150,
-          "description": "Bayar Asuransi Kargo",
-          "created_at": "2025-02-20"
-        },
-        {
-          "tx_id": 5,
-          "type": "topup",
-          "amount": 45.5,
-          "description": "Pendapatan Domestik - ORD-2025-001",
-          "created_at": "2025-02-18"
-        },
-        {
-          "tx_id": 6,
-          "type": "withdraw",
-          "amount": 280,
-          "description": "Biaya Logistik & Container",
-          "created_at": "2025-03-05"
-        }
-      ]
-    },
-    "2": {
-      "balance_usd": 98500,
-      "pending_usd": 0,
-      "transactions": []
-    }
-  },
-  "orders": {
-    "1": [
-      {
-        "order_id": "ORD-2025-001",
-        "product_id": 4,
-        "product_title": "Beras Jasmine Premium Grade A",
-        "qty": 50,
-        "price_usd": 0.91,
-        "total_usd": 45.5,
-        "total_idr": 720250,
-        "status": "completed",
-        "type": "domestic",
-        "date": "2025-02-15",
-        "buyer_name": "PT Indofood",
-        "seller_name": "Beras Karawang Jaya"
-      },
-      {
-        "order_id": "ORD-2025-002",
-        "product_id": 1,
-        "product_title": "Kopi Robusta Lampung Grade 1",
-        "qty": 10,
-        "price_usd": 4.3,
-        "total_usd": 430,
-        "total_idr": 6815000,
-        "status": "in_transit",
-        "type": "export",
-        "date": "2025-03-01",
-        "buyer_name": "Frankfurt Kaffee GmbH",
-        "seller_name": "Tani Maju Lampung"
-      },
-      {
-        "order_id": "ORD-2025-003",
-        "product_id": 2,
-        "product_title": "Lada Hitam Lampung Premium",
-        "qty": 5,
-        "price_usd": 3.85,
-        "total_usd": 19.25,
-        "total_idr": 305062,
-        "status": "pending",
-        "type": "export",
-        "date": "2025-03-10",
-        "buyer_name": "Yamamoto Trading",
-        "seller_name": "Tani Maju Lampung"
-      },
-      {
-        "order_id": "ORD-2024-099",
-        "product_id": 1,
-        "product_title": "Kopi Robusta Lampung Grade 1",
-        "qty": 20,
-        "price_usd": 4.1,
-        "total_usd": 82,
-        "total_idr": 1299700,
-        "status": "completed",
-        "type": "export",
-        "date": "2024-11-20",
-        "buyer_name": "Rotterdam Agri B.V.",
-        "seller_name": "Tani Maju Lampung"
-      },
-      {
-        "order_id": "ORD-2024-078",
-        "product_id": 9,
-        "product_title": "Udang Vaname Fresh Grade A",
-        "qty": 3,
-        "price_usd": 5.4,
-        "total_usd": 16.2,
-        "total_idr": 256800,
-        "status": "completed",
-        "type": "domestic",
-        "date": "2024-10-05",
-        "buyer_name": "Hotel Grand Hyatt",
-        "seller_name": "Udang Vaname Lampung"
-      }
-    ]
-  },
-  "cart": {
-    "1": [
-      {
-        "cart_id": 1001,
-        "product_id": 1,
-        "quantity": 10
-      },
-      {
-        "cart_id": 1002,
-        "product_id": 5,
-        "quantity": 15
-      },
-      {
-        "cart_id": 1003,
-        "product_id": 4,
-        "quantity": 50
-      }
+
+  "gis_infrastructure": [
+    { "id": "INF-01", "name": "Gudang Cold Storage Natar (Tani Maju)", "type": "warehouse", "lat": -5.32, "lng": 105.18, "capacity": "500 Ton" },
+    { "id": "INF-02", "name": "Hub Pelabuhan Panjang (Container Depot)", "type": "container_depot", "lat": -5.46, "lng": 105.31, "capacity": "1.200 TEU" },
+    { "id": "INF-03", "name": "Pelabuhan Tanjung Priok (Export Gateway)", "type": "port", "lat": -6.1, "lng": 106.88, "capacity": "7.5 Juta TEU/Tahun" }
+  ],
+
+  "user_provider_assets": {
+    "warehouses": [
+      { "id": "WH-01", "name": "Gudang Cold Storage Natar Hub 1", "type": "Cold Storage (2 - 8°C)", "location": "Natar, Lampung", "total_capacity": 500, "occupied_capacity": 180, "rate_idr": 4500, "status": "Active" },
+      { "id": "WH-02", "name": "Gudang Dry Commodities Panjang", "type": "Dry Storage Ambient", "location": "Panjang, Bandar Lampung", "total_capacity": 1200, "occupied_capacity": 450, "rate_idr": 3000, "status": "Active" },
+      { "id": "WH-03", "name": "Buffer Storage Cikarang Hub 2", "type": "Dry & Cold Storage", "location": "Cikarang, Jawa Barat", "total_capacity": 800, "occupied_capacity": 210, "rate_idr": 5000, "status": "Active" }
     ],
-    "2": []
-  },
-  "negotiations": {
-    "1": [
-      {
-        "neg_id": 1,
-        "product_id": 1,
-        "product_title": "Kopi Robusta Lampung Grade 1",
-        "buyer_name": "Frankfurt Kaffee GmbH",
-        "original_price": 4.3,
-        "buyer_offer": 4.0,
-        "seller_counter": 4.15,
-        "status": "counter",
-        "message": "Kami tertarik untuk 20 ton/bulan rutin. Bisa di-counter?",
-        "created_at": "2025-03-08"
-      },
-      {
-        "neg_id": 2,
-        "product_id": 2,
-        "product_title": "Lada Hitam Lampung Premium",
-        "buyer_name": "Yamamoto Trading Co.",
-        "original_price": 3.85,
-        "buyer_offer": 3.7,
-        "seller_counter": null,
-        "status": "open",
-        "message": "Order perdana 5 ton, ingin harga spesial.",
-        "created_at": "2025-03-12"
-      }
+    "containers": [
+      { "id": "CT-01", "number": "LOORI-2024-8812", "type": "Dry 20ft (FCL / LCL Split)", "capacity_ton": 24, "rate_idr": 150000, "status": "Ready for Rent" },
+      { "id": "CT-02", "number": "LOORI-2024-9905", "type": "Reefer 40ft (Pendingin)", "capacity_ton": 28, "rate_idr": 450000, "status": "Disewakan" },
+      { "id": "CT-03", "number": "LOORI-2024-7741", "type": "Dry 40ft High Cube", "capacity_ton": 29, "rate_idr": 220000, "status": "Ready for Rent" }
+    ],
+    "trucks": [
+      { "id": "TRK-01", "plate": "BE 8890 AK", "type": "Tronton Wingbox 20 Ton", "driver": "Slamet Widodo", "rate_idr": 14000, "status": "Ready" },
+      { "id": "TRK-02", "plate": "BE 9901 BK", "type": "Fuso Box 10 Ton", "driver": "Budi Prayitno", "rate_idr": 11000, "status": "In Transit" },
+      { "id": "TRK-03", "plate": "B 9550 UI", "type": "Trailer Container 40ft", "driver": "Ahmad Subagjo", "rate_idr": 18000, "status": "Ready" }
     ]
   },
-  "tenders": [
+
+  "escrow_orders": [
     {
-      "tender_id": 1,
-      "title": "Pengadaan Beras 500 ton - Bulog Jatim",
-      "commodity_name": "Beras",
-      "quantity": 500,
-      "unit": "ton",
-      "budget_idr": 7250000000,
-      "deadline": "2025-04-30",
-      "status": "open",
-      "bids": 8,
-      "created_by": "PERUM BULOG Div. Regional Jawa Timur",
-      "requirements": "Grade A, Kadar Air <14%, SNI",
-      "location": "Surabaya"
-    },
-    {
-      "tender_id": 2,
-      "title": "Supply Kopi Arabika 12 Bulan - EU Buyer",
-      "commodity_name": "Kopi Arabika",
-      "quantity": 120,
-      "unit": "ton",
-      "budget_usd": 900000,
-      "deadline": "2025-04-15",
-      "status": "open",
-      "bids": 12,
-      "created_by": "Amsterdam Coffee Roasters",
-      "requirements": "Specialty Grade 85+, Organic Certified",
-      "location": "Ekspor ke Belanda"
-    },
-    {
-      "tender_id": 3,
-      "title": "Kakao Fermented 50 ton - Quarterly",
-      "commodity_name": "Kakao",
-      "quantity": 50,
-      "unit": "ton",
-      "budget_usd": 170000,
-      "deadline": "2025-05-01",
-      "status": "open",
-      "bids": 5,
-      "created_by": "Barry Callebaut Asia Pacific",
-      "requirements": "Grade AA, Fermentasi Penuh, SPS Certified",
-      "location": "Ekspor ke Belgia"
-    },
-    {
-      "tender_id": 4,
-      "title": "Jagung Pakan Ternak 2000 ton - CP",
-      "commodity_name": "Jagung",
-      "quantity": 2000,
-      "unit": "ton",
-      "budget_idr": 8400000000,
-      "deadline": "2025-04-20",
-      "status": "open",
-      "bids": 15,
-      "created_by": "PT Charoen Pokphand Indonesia",
-      "requirements": "Grade A, Aflatoksin <20ppb, Kadar Air <14%",
-      "location": "Jawa Timur"
-    }
-  ],
-  "contracts": {
-    "1": [
-      {
-        "contract_id": 1,
-        "title": "Kontrak Kopi Robusta Q2 2025",
-        "commodity_name": "Kopi Robusta",
-        "quantity": 60,
-        "price_per_unit": 4.2,
-        "total_value": 252,
-        "status": "active",
-        "harvest_date": "2025-05-15",
-        "buyer_name": "Frankfurt Kaffee GmbH",
-        "created_at": "2025-02-01"
-      },
-      {
-        "contract_id": 2,
-        "title": "Kontrak Lada Hitam Annual 2025",
-        "commodity_name": "Lada Hitam",
-        "quantity": 30,
-        "price_per_unit": 3.9,
-        "total_value": 117,
-        "status": "draft",
-        "harvest_date": "2025-09-01",
-        "buyer_name": "Yamamoto Trading",
-        "created_at": "2025-03-01"
-      }
-    ]
-  },
-  "notifications": {
-    "1": [
-      {
-        "notif_id": 1,
-        "title": "Tawaran Baru Masuk",
-        "body": "Frankfurt Kaffee GmbH menawarkan $4.00/kg untuk Kopi Robusta 20 ton. Tawaran ini 6.9% di bawah harga listing Anda.",
-        "type": "offer",
-        "read_status": false,
-        "created_at": "2025-03-12T10:30:00Z"
-      },
-      {
-        "notif_id": 2,
-        "title": "Pesanan Dalam Pengiriman",
-        "body": "ORD-2025-002 (Kopi Robusta 10 ton) sedang dikirim ke Frankfurt, Jerman. Estimasi tiba 28 Maret 2025.",
-        "type": "order",
-        "read_status": false,
-        "created_at": "2025-03-10T14:00:00Z"
-      },
-      {
-        "notif_id": 3,
-        "title": "Tender Baru Cocok Produk Anda",
-        "body": "Amsterdam Coffee Roasters mencari Kopi Arabika 120 ton/tahun. Budget $900,000. Deadline 15 April 2025.",
-        "type": "tender",
-        "read_status": false,
-        "created_at": "2025-03-09T09:00:00Z"
-      },
-      {
-        "notif_id": 4,
-        "title": "AI Price Alert — Kopi Robusta",
-        "body": "Harga Kopi Robusta naik 5.1% ke $4.30/kg. ICE London di posisi 4-year high. Waktu optimal untuk listing baru.",
-        "type": "price",
-        "read_status": true,
-        "created_at": "2025-03-08T08:00:00Z"
-      },
-      {
-        "notif_id": 5,
-        "title": "Pesan Baru dari Yamamoto Trading",
-        "body": "Yamamoto Trading Co. mengirim pesan baru tentang order Lada Hitam 5 ton.",
-        "type": "chat",
-        "read_status": true,
-        "created_at": "2025-03-07T15:30:00Z"
-      },
-      {
-        "notif_id": 6,
-        "title": "Negosiasi Counter-Offer Diterima",
-        "body": "Counter-offer $4.15/kg untuk Kopi Robusta dari Frankfurt Kaffee GmbH telah diterima. Siap proses pembayaran.",
-        "type": "order",
-        "read_status": true,
-        "created_at": "2025-03-06T11:00:00Z"
-      }
-    ]
-  },
-  "chats": {
-    "1": [
-      {
-        "chat_id": 1,
-        "other_id": 20,
-        "other_name": "Frankfurt Kaffee GmbH",
-        "last_message": "Kami setuju harga $4.15/kg untuk kontrak 6 bulan",
-        "last_time": "10:30",
-        "messages": [
-          {
-            "msg_id": 1,
-            "content": "Halo, kami tertarik dengan Kopi Robusta Grade 1 Anda",
-            "is_mine": false,
-            "time": "09:00"
-          },
-          {
-            "msg_id": 2,
-            "content": "Selamat pagi! Terima kasih minatnya. Produk kami tersedia 80 ton saat ini.",
-            "is_mine": true,
-            "time": "09:15"
-          },
-          {
-            "msg_id": 3,
-            "content": "Bisa kirim sampel 5kg dulu? Untuk quality test kami di lab Hamburg",
-            "is_mine": false,
-            "time": "09:30"
-          },
-          {
-            "msg_id": 4,
-            "content": "Bisa. Kami akan kirim via DHL express.",
-            "is_mine": true,
-            "time": "09:45"
-          },
-          {
-            "msg_id": 5,
-            "content": "Bagus. Kalau OK dari lab, kami siap kontrak 20 ton/bulan. Harga terbaik berapa?",
-            "is_mine": false,
-            "time": "10:00"
-          },
-          {
-            "msg_id": 6,
-            "content": "Untuk volume itu kami bisa offer $4.15/kg FOB Bandar Lampung. Sudah include Phytosanitary.",
-            "is_mine": true,
-            "time": "10:20"
-          },
-          {
-            "msg_id": 7,
-            "content": "Kami setuju harga $4.15/kg untuk kontrak 6 bulan",
-            "is_mine": false,
-            "time": "10:30"
-          }
-        ]
-      },
-      {
-        "chat_id": 2,
-        "other_id": 21,
-        "other_name": "Yamamoto Trading Co.",
-        "last_message": "Order pertama 5 ton bulan depan ya",
-        "last_time": "Kemarin",
-        "messages": [
-          {
-            "msg_id": 1,
-            "content": "Konnichiwa! Kami dari Yamamoto Trading Osaka.",
-            "is_mine": false,
-            "time": "14:00"
-          },
-          {
-            "msg_id": 2,
-            "content": "Ya, kami punya stok 30 ton lada hitam 550 g/L grade premium.",
-            "is_mine": true,
-            "time": "14:10"
-          },
-          {
-            "msg_id": 3,
-            "content": "Order pertama 5 ton bulan depan ya",
-            "is_mine": false,
-            "time": "15:00"
-          }
-        ]
-      }
-    ]
-  },
-  "commodity_prices": [
-    {
-      "name": "Beras Jasmine",
-      "price_usd": 0.91,
-      "price_idr": 14500,
-      "change": 2.3,
-      "unit": "kg",
-      "icon": "grain"
-    },
-    {
-      "name": "Kopi Robusta",
-      "price_usd": 4.3,
-      "price_idr": 68000,
-      "change": 5.1,
-      "unit": "kg",
-      "icon": "coffee"
-    },
-    {
-      "name": "CPO",
-      "price_usd": 892,
-      "price_idr": 14138000,
-      "change": -1.2,
-      "unit": "ton",
-      "icon": "palm-tree"
-    },
-    {
-      "name": "Jagung Pipil",
-      "price_usd": 0.27,
-      "price_idr": 4200,
-      "change": 0.8,
-      "unit": "kg",
-      "icon": "corn"
-    },
-    {
-      "name": "Kakao",
-      "price_usd": 3240,
-      "price_idr": 51318000,
-      "change": 3.6,
-      "unit": "ton",
-      "icon": "food-variant"
-    },
-    {
-      "name": "Karet Alam",
-      "price_usd": 1.56,
-      "price_idr": 24708,
-      "change": -0.4,
-      "unit": "kg",
-      "icon": "leaf"
-    },
-    {
-      "name": "Kedelai",
-      "price_usd": 0.49,
-      "price_idr": 7800,
-      "change": 1.9,
-      "unit": "kg",
-      "icon": "circle-slice-8"
-    },
-    {
-      "name": "Lada Hitam",
-      "price_usd": 3.85,
-      "price_idr": 61000,
-      "change": 3.2,
-      "unit": "kg",
-      "icon": "seed-outline"
-    },
-    {
-      "name": "Nikel",
-      "price_usd": 16200,
-      "price_idr": 256770000,
-      "change": 4.2,
-      "unit": "ton",
-      "icon": "diamond-stone"
-    },
-    {
-      "name": "Udang Vaname",
-      "price_usd": 5.4,
-      "price_idr": 85500,
-      "change": 3.0,
-      "unit": "kg",
-      "icon": "fish-outline"
-    }
-  ],
-  "market_traffic": [
-    {
-      "name": "Kopi Robusta",
-      "icon": "coffee",
-      "current": 4.3,
-      "change": 5.1,
-      "history": [
-        3.9,
-        4.0,
-        3.95,
-        4.1,
-        4.0,
-        4.15,
-        4.2,
-        4.1,
-        4.25,
-        4.3
+      "order_id": "ORD-DOM-2026-001",
+      "buyer_name": "PT Indofood Sukses Makmur",
+      "commodity_title": "Kopi Robusta Lampung Grade 1",
+      "qty_ton": 15,
+      "grand_total_idr": 1038500000,
+      "status": "in_transit",
+      "current_step": 3,
+      "eta_date": "28 Juli 2026",
+      "tracking_steps": [
+        {"step": 1, "title": "Kontrak Digital TTD", "date": "24 Jul 10:00", "done": true},
+        {"step": 2, "title": "Inspeksi Mutu Natar", "date": "25 Jul 14:30", "done": true},
+        {"step": 3, "title": "Muat Kontainer & Surat Jalan", "date": "26 Jul 08:15", "done": true},
+        {"step": 4, "title": "Tiba Gudang Tujuan Cikarang", "date": "Est 27 Jul", "done": false},
+        {"step": 5, "title": "Konfirmasi Final Buyer", "date": "Est 28 Jul", "done": false}
+      ],
+      "milestones": [
+        {"step": 1, "pct": 20, "name": "Kontrak Digital TTD", "amount_idr": 207700000, "released": true},
+        {"step": 2, "pct": 30, "name": "Inspeksi Mutu & Gudang Asal", "amount_idr": 311550000, "released": true},
+        {"step": 3, "pct": 30, "name": "Muat Kontainer & Surat Jalan", "amount_idr": 311550000, "released": false},
+        {"step": 4, "pct": 15, "name": "Barang Tiba Gudang Tujuan", "amount_idr": 155775000, "released": false},
+        {"step": 5, "pct": 5, "name": "Konfirmasi Final Buyer (Retensi 7 Hari)", "amount_idr": 51925000, "released": false}
       ]
     },
     {
-      "name": "CPO",
-      "icon": "palm-tree",
-      "current": 892,
-      "change": -1.2,
-      "history": [
-        905,
-        900,
-        910,
-        895,
-        890,
-        900,
-        905,
-        895,
-        880,
-        892
+      "order_id": "ORD-EXP-2026-002",
+      "buyer_name": "Frankfurt Kaffee GmbH",
+      "commodity_title": "Lada Hitam Lampung Super 550g/L",
+      "qty_ton": 20,
+      "grand_total_idr": 1220000000,
+      "status": "inspection",
+      "current_step": 2,
+      "eta_date": "10 Agustus 2026",
+      "tracking_steps": [
+        {"step": 1, "title": "PO & Contract Signed", "date": "22 Jul 16:00", "done": true},
+        {"step": 2, "title": "Audit Phyto & Quality Test", "date": "26 Jul 11:00", "done": true},
+        {"step": 3, "title": "Stuffing Container FCL 20ft", "date": "Est 29 Jul", "done": false},
+        {"step": 4, "title": "Customs Clearance Priok", "date": "Est 02 Aug", "done": false},
+        {"step": 5, "title": "Vessel Departure to Hamburg", "date": "Est 05 Aug", "done": false}
+      ],
+      "milestones": [
+        {"step": 1, "pct": 20, "name": "Kontrak Digital TTD", "amount_idr": 244000000, "released": true},
+        {"step": 2, "pct": 30, "name": "Inspeksi Karantina Phyto", "amount_idr": 366000000, "released": false},
+        {"step": 3, "pct": 30, "name": "Muat Kontainer & Bill of Lading", "amount_idr": 366000000, "released": false},
+        {"step": 4, "pct": 15, "name": "Tiba Port of Hamburg", "amount_idr": 183000000, "released": false},
+        {"step": 5, "pct": 5, "name": "Final Release Retensi", "amount_idr": 61000000, "released": false}
       ]
     },
     {
-      "name": "Kakao",
-      "icon": "food-variant",
-      "current": 3240,
-      "change": 3.6,
-      "history": [
-        3100,
-        3120,
-        3150,
-        3130,
-        3160,
-        3180,
-        3200,
-        3190,
-        3210,
-        3240
-      ]
-    },
-    {
-      "name": "Nikel",
-      "icon": "diamond-stone",
-      "current": 16200,
-      "change": 4.2,
-      "history": [
-        15500,
-        15600,
-        15700,
-        15800,
-        15900,
-        15800,
-        16000,
-        16100,
-        16050,
-        16200
+      "order_id": "ORD-DOM-2026-003",
+      "buyer_name": "PERUM BULOG Divre Jatim",
+      "commodity_title": "Beras Pandan Wangi Super",
+      "qty_ton": 100,
+      "grand_total_idr": 1460000000,
+      "status": "completed",
+      "current_step": 5,
+      "eta_date": "Selesai (20 Jul 2026)",
+      "tracking_steps": [
+        {"step": 1, "title": "Kontrak B2G BULOG", "date": "10 Jul 09:00", "done": true},
+        {"step": 2, "title": "Inspeksi Gudang Karawang", "date": "12 Jul 11:00", "done": true},
+        {"step": 3, "title": "Pengiriman Armada Fuso", "date": "15 Jul 06:00", "done": true},
+        {"step": 4, "title": "Tiba Gudang BULOG Surabaya", "date": "17 Jul 18:00", "done": true},
+        {"step": 5, "title": "Serah Terima & Rilis Full Escrow", "date": "20 Jul 14:00", "done": true}
+      ],
+      "milestones": [
+        {"step": 1, "pct": 20, "name": "Kontrak Digital TTD", "amount_idr": 292000000, "released": true},
+        {"step": 2, "pct": 30, "name": "Inspeksi Mutu Karawang", "amount_idr": 438000000, "released": true},
+        {"step": 3, "pct": 30, "name": "Surat Jalan & Pengiriman", "amount_idr": 438000000, "released": true},
+        {"step": 4, "pct": 15, "name": "Barang Tiba Surabaya", "amount_idr": 219000000, "released": true},
+        {"step": 5, "pct": 5, "name": "Rilis Dana Retensi Final", "amount_idr": 73000000, "released": true}
       ]
     }
   ],
-  "currencies": {
-    "IDR": {
-      "code": "IDR",
-      "name": "Rupiah Indonesia",
-      "symbol": "Rp",
-      "rate": 15850,
-      "flag": "ID"
-    },
-    "USD": {
-      "code": "USD",
-      "name": "US Dollar",
-      "symbol": "$",
-      "rate": 1,
-      "flag": "US"
-    },
-    "EUR": {
-      "code": "EUR",
-      "name": "Euro",
-      "symbol": "€",
-      "rate": 0.91,
-      "flag": "EU"
-    },
-    "SGD": {
-      "code": "SGD",
-      "name": "Sing Dollar",
-      "symbol": "S$",
-      "rate": 1.33,
-      "flag": "SG"
-    },
-    "JPY": {
-      "code": "JPY",
-      "name": "Yen Jepang",
-      "symbol": "¥",
-      "rate": 149,
-      "flag": "JP"
-    },
-    "CNY": {
-      "code": "CNY",
-      "name": "Yuan China",
-      "symbol": "¥",
-      "rate": 7.23,
-      "flag": "CN"
-    },
-    "SAR": {
-      "code": "SAR",
-      "name": "Riyal Saudi",
-      "symbol": "SR",
-      "rate": 3.75,
-      "flag": "SA"
-    },
-    "MYR": {
-      "code": "MYR",
-      "name": "Ringgit Malaysia",
-      "symbol": "RM",
-      "rate": 4.71,
-      "flag": "MY"
-    },
-    "AUD": {
-      "code": "AUD",
-      "name": "Dollar Australia",
-      "symbol": "A$",
-      "rate": 1.52,
-      "flag": "AU"
-    }
-  },
+
   "buyers": [
-    {
-      "id": 1,
-      "company": "Yamamoto Trading Co.",
-      "country": "Jepang",
-      "region": "Asia",
-      "flag": "JP",
-      "commodities": [
-        "Kopi",
-        "Lada",
-        "Rempah"
-      ],
-      "volume": "200-500 ton/bln",
-      "verified": true,
-      "demand": "Tinggi",
-      "contact": "trade@yamamoto-trading.co.jp"
-    },
-    {
-      "id": 2,
-      "company": "Shanghai Agri Import Ltd",
-      "country": "China",
-      "region": "Asia",
-      "flag": "CN",
-      "commodities": [
-        "CPO",
-        "Kakao",
-        "Karet"
-      ],
-      "volume": ">2000 ton/bln",
-      "verified": true,
-      "demand": "Sangat Tinggi",
-      "contact": "import@shanghai-agri.cn"
-    },
-    {
-      "id": 3,
-      "company": "Frankfurt Kaffee GmbH",
-      "country": "Jerman",
-      "region": "Eropa",
-      "flag": "DE",
-      "commodities": [
-        "Kopi Robusta",
-        "Kakao"
-      ],
-      "volume": "100-300 ton/bln",
-      "verified": true,
-      "demand": "Tinggi",
-      "contact": "procurement@frankfurtkaffee.de"
-    },
-    {
-      "id": 4,
-      "company": "Al-Marai Saudi Arabia",
-      "country": "Arab Saudi",
-      "region": "Timur Tengah",
-      "flag": "SA",
-      "commodities": [
-        "Beras",
-        "Gula",
-        "Kopi"
-      ],
-      "volume": ">500 ton/bln",
-      "verified": true,
-      "demand": "Tinggi",
-      "contact": "agri@almarai.com.sa"
-    },
-    {
-      "id": 5,
-      "company": "Rotterdam Agri B.V.",
-      "country": "Belanda",
-      "region": "Eropa",
-      "flag": "NL",
-      "commodities": [
-        "CPO",
-        "Karet",
-        "Kakao"
-      ],
-      "volume": ">1000 ton/bln",
-      "verified": true,
-      "demand": "Sangat Tinggi",
-      "contact": "agri@rotterdamagri.nl"
-    },
-    {
-      "id": 6,
-      "company": "SG Commodities Pte.",
-      "country": "Singapura",
-      "region": "Asia",
-      "flag": "SG",
-      "commodities": [
-        "Semua Komoditas"
-      ],
-      "volume": ">2000 ton/bln",
-      "verified": true,
-      "demand": "Sangat Tinggi",
-      "contact": "trade@sgcommodities.sg"
-    },
-    {
-      "id": 7,
-      "company": "Olam International India",
-      "country": "India",
-      "region": "Asia Selatan",
-      "flag": "IN",
-      "commodities": [
-        "Kakao",
-        "Kopi",
-        "Rempah"
-      ],
-      "volume": ">800 ton/bln",
-      "verified": true,
-      "demand": "Tinggi",
-      "contact": "india@olamgroup.com"
-    },
-    {
-      "id": 8,
-      "company": "Sydney Bulk Foods Pty",
-      "country": "Australia",
-      "region": "Oceania",
-      "flag": "AU",
-      "commodities": [
-        "Kakao",
-        "Kopi",
-        "Udang"
-      ],
-      "volume": "200-500 ton/bln",
-      "verified": false,
-      "demand": "Sedang",
-      "contact": "imports@sydneybulk.com.au"
-    }
+    { "company": "PT Indofood Sukses Makmur", "region": "Domestik", "flag": "ID", "volume": "500 - 2.000 Ton / bulan" },
+    { "company": "Frankfurt Kaffee GmbH", "region": "Eropa (Global)", "flag": "DE", "volume": "200 - 500 Ton / bulan" },
+    { "company": "Yamamoto Trading Co.", "region": "Asia (Global)", "flag": "JP", "volume": "100 - 300 Ton / bulan" },
+    { "company": "PERUM BULOG Divre Jawa Timur", "region": "Domestik B2G", "flag": "ID", "volume": "5.000 - 20.000 Ton / bulan" },
+    { "company": "Dubai Spices DMCC", "region": "Timur Tengah (Global)", "flag": "AE", "volume": "300 - 800 Ton / bulan" },
+    { "company": "Singapore Agri Commodity Hub", "region": "ASEAN (Global)", "flag": "SG", "volume": "1.000 - 3.000 Ton / bulan" }
   ],
+
+  "commodity_prices": [
+    {"name": "Beras Pandan Wangi", "price_usd": 0.92, "price_idr": 14600, "change": 2.3, "unit": "kg", "icon": "mdi-grain"},
+    {"name": "Kopi Robusta", "price_usd": 4.3, "price_idr": 68000, "change": 5.1, "unit": "kg", "icon": "mdi-coffee"},
+    {"name": "CPO Sawit", "price_usd": 895, "price_idr": 14180000, "change": -1.2, "unit": "ton", "icon": "mdi-palm-tree"},
+    {"name": "Jagung Pipil", "price_usd": 0.27, "price_idr": 4250, "change": 0.8, "unit": "kg", "icon": "mdi-corn"},
+    {"name": "Kakao Fermentasi", "price_usd": 3400, "price_idr": 53900000, "change": 3.6, "unit": "ton", "icon": "mdi-food-variant"},
+    {"name": "Lada Hitam", "price_usd": 3.85, "price_idr": 61000, "change": 3.2, "unit": "kg", "icon": "mdi-seed-outline"},
+    {"name": "Nikel Saprolit", "price_usd": 16200, "price_idr": 256700000, "change": 4.2, "unit": "ton", "icon": "mdi-diamond-stone"},
+    {"name": "Udang Vaname", "price_usd": 5.5, "price_idr": 87000, "change": 3.0, "unit": "kg", "icon": "mdi-fish-outline"}
+  ],
+
   "community_posts": [
     {
-      "post_id": 1,
-      "author_id": 1,
+      "id": 101,
       "author_name": "Budi Santoso",
-      "post_type": "INFO",
-      "content": "Harga kopi robusta Lampung sedang naik! Saat ini di posisi $4.30/kg dari sebelumnya $4.10/kg. Teman-teman yang punya stok bisa pertimbangkan untuk listing sekarang.",
-      "like_count": 24,
-      "comment_count": 8,
-      "created_at": "2025-03-12T09:00:00"
-    },
-    {
-      "post_id": 2,
-      "author_id": 3,
-      "author_name": "Sawit Nusantara",
-      "post_type": "SELLER",
-      "content": "[LISTING BARU] CPO Premium tersedia 5000 MT di Dumai. Harga $895/MT FOB. RSPO & ISPO certified. Kontrak minimum 3 bulan.",
-      "like_count": 15,
+      "handle": "@budisantoso_tani",
+      "role_badge": "Multi-Role Seller & Logistics",
+      "avatar": "B",
+      "time_ago": "2 jam lalu",
+      "post_type": "PENAWARAN PANEN",
+      "content": "Kopi Robusta Lampung Grade 1 petik merah siap 85 ton di Gudang Cold Storage Natar Hub. Kadar air 12.5%, defect <3%, sudah lengkap dokumen Phytosanitary & ISO 22000. Siap kirim via kontainer LCL/FCL ke seluruh Indonesia & ekspor! 🌿☕ #KopiLampung #ExportReady #LooriCommodity",
+      "img": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=800&q=80",
+      "like_count": 48,
+      "repost_count": 14,
       "comment_count": 5,
-      "created_at": "2025-03-11T14:00:00"
+      "comments": [
+        { "author": "Frankfurt Kaffee", "handle": "@frankfurt_kaffee", "text": "Apakah ada sample 1kg untuk dikirim ke Hamburg via Express Freight?", "time": "1 jam lalu" },
+        { "author": "Budi Santoso", "handle": "@budisantoso_tani", "text": "Siap Pak, Air Freight Sample bisa kami kirimkan besok pagi lengkap dengan Phyto certificate.", "time": "45 mnt lalu" }
+      ]
     },
     {
-      "post_id": 3,
-      "author_id": 5,
-      "author_name": "Kakao Sulawesi",
-      "post_type": "DISCUSSION",
-      "content": "Ada yang punya pengalaman ekspor kakao ke Belgia? Kami sedang mempersiapkan dokumen untuk buyer baru dari Brussels.",
-      "like_count": 31,
-      "comment_count": 14,
-      "created_at": "2025-03-10T10:00:00"
+      "id": 102,
+      "author_name": "PT Indofood Procurement",
+      "handle": "@indofood_procurement",
+      "role_badge": "Buyer Domestik",
+      "avatar": "I",
+      "time_ago": "4 jam lalu",
+      "post_type": "CARIBUYER",
+      "content": "[RFQ URGENT] Membutuhkan pasokan Jagung Pipil Pakan Ternak 500 Ton untuk pengiriman ke Pabrik Cikande, Banten. Syarat: Kadar air <14%, aflatoksin <20ppb. Bagi suplier yang punya stok di Lampung/Jatim silakan ajukan bid di E-Tender! 🌽📦 #CariJagung #IndofoodRFQ #PakanTernak",
+      "img": "https://images.unsplash.com/photo-1551754655-cd27e38d2076?auto=format&fit=crop&w=800&q=80",
+      "like_count": 35,
+      "repost_count": 22,
+      "comment_count": 3,
+      "comments": [
+        { "author": "Jagung Kediri Hub", "handle": "@jagung_kediri", "text": "Stok 200 Ton ready di Kediri, armada Tronton siap muat besok pagi.", "time": "2 jam lalu" }
+      ]
     },
     {
-      "post_id": 4,
-      "author_id": 10,
-      "author_name": "Gula Aren Organik",
-      "post_type": "BUYER",
-      "content": "[DICARI] Mencari supplier gula aren organik NTB dengan kapasitas min 5 ton/bulan. Budget $2.00-2.50/kg. Kami memiliki kontrak rutin ke toko organik di Australia.",
-      "like_count": 19,
-      "comment_count": 11,
-      "created_at": "2025-03-09T08:00:00"
-    },
-    {
-      "post_id": 5,
-      "author_id": 7,
-      "author_name": "Jagung Makmur",
-      "post_type": "TENDER",
-      "content": "[TENDER] Mencari pemasok jagung pipil kering 500 ton untuk pabrik pakan Malang. Grade A, kadar air <14%. Harga kompetitif. Deadline penawaran 15 April 2025.",
-      "like_count": 28,
-      "comment_count": 9,
-      "created_at": "2025-03-08T11:00:00"
+      "id": 103,
+      "author_name": "Samudera Shipping Line",
+      "handle": "@samudera_logistics",
+      "role_badge": "Logistics & Freight Partner",
+      "avatar": "SL",
+      "time_ago": "6 jam lalu",
+      "post_type": "INFO LOGISTIK",
+      "content": "Jadwal Kapal Freight Laut Rute Panjang Lampung ➔ Tanjung Priok & Surabaya minggu ini: Selasa & Jumat. Kuota Sewa Kontainer 20ft & LCL Split Slot masih tersedia 12 TEU! 🚢📦 #LogistikTerpadu #FreightForwarder #ContainerSplit",
+      "img": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
+      "like_count": 62,
+      "repost_count": 18,
+      "comment_count": 4,
+      "comments": []
     }
   ],
-  "intel_data": [
+
+  "tenders": [
     {
-      "id": 1,
-      "country": "China",
-      "flag": "CN",
-      "commodity": "CPO",
-      "demand": 91,
-      "signal": "sell",
-      "trend": "Permintaan CPO China meningkat 15% QoQ akibat pemulihan industri F&B. Tarif preferensial CPO Indonesia berlanjut hingga 2026.",
-      "price_target": 920,
-      "current_price": 892
+      "id": "TND-2026-01",
+      "title": "Pengadaan Kopi Robusta 50 Ton - PT Indofood",
+      "buyer_name": "PT Indofood Sukses Makmur",
+      "volume_required": "50 Ton",
+      "budget_idr": 3400000000,
+      "deadline": "30 Juli 2026",
+      "status": "Active",
+      "bids": 6,
+      "requirements": "Grade 1, Kadar Air <13%, Defect <3%, Sertifikat Halal & Phytosanitary.",
+      "proposals": [
+        { "supplier": "Tani Maju Lampung", "price_per_kg": 67500, "note": "Siap muat dari Gudang Natar dalam 3 hari" },
+        { "supplier": "Kopi Gayo Mandiri", "price_per_kg": 68000, "note": "Sertifikasi Rainforest Alliance included" }
+      ]
     },
     {
-      "id": 2,
-      "country": "Jerman",
-      "flag": "DE",
-      "commodity": "Kopi Robusta",
-      "demand": 88,
-      "signal": "sell",
-      "trend": "Defisit stok kopi di Eropa berlanjut. Robusta Vietnam kena banjir, shifting demand ke Indonesia. Harga ICE Robusta London menyentuh 4-year high.",
-      "price_target": 4.5,
-      "current_price": 4.3
+      "id": "TND-2026-02",
+      "title": "Supply Lada Hitam 20 Ton - Frankfurt Kaffee",
+      "buyer_name": "Frankfurt Kaffee GmbH",
+      "volume_required": "20 Ton",
+      "budget_idr": 1220000000,
+      "deadline": "05 Agustus 2026",
+      "status": "Active",
+      "bids": 4,
+      "requirements": "Export Readiness Score >= 75, Density Super 550g/L, Container FCL 20ft.",
+      "proposals": [
+        { "supplier": "Tani Maju Lampung", "price_per_kg": 60500, "note": "Kemasan Karung Jute 50kg + Liner PE" }
+      ]
     },
     {
-      "id": 3,
-      "country": "Jepang",
-      "flag": "JP",
-      "commodity": "Lada Hitam",
-      "demand": 85,
-      "signal": "sell",
-      "trend": "Importir rempah Jepang menaikkan kuota pembelian untuk Q2. Lada Lampung sangat diminati karena kadar minyak atsiri tinggi.",
-      "price_target": 4200,
-      "current_price": 3850
-    },
-    {
-      "id": 4,
-      "country": "Arab Saudi",
-      "flag": "SA",
-      "commodity": "Beras",
-      "demand": 85,
-      "signal": "sell",
-      "trend": "Impor beras Saudi meningkat 20% YoY jelang Ramadan. Program diversifikasi pangan Saudi Vision 2030 menciptakan demand struktural.",
-      "price_target": 1050,
-      "current_price": 910
-    },
-    {
-      "id": 5,
-      "country": "India",
-      "flag": "IN",
-      "commodity": "Lada Hitam",
-      "demand": 95,
-      "signal": "sell",
-      "trend": "India kekurangan pasokan lada pasca gagal panen di Kerala. Harga spot Mumbai premium 12% di atas harga London.",
-      "price_target": 4200,
-      "current_price": 3850
-    },
-    {
-      "id": 6,
-      "country": "Korea Selatan",
-      "flag": "KR",
-      "commodity": "Karet TSR20",
-      "demand": 70,
-      "signal": "buy",
-      "trend": "Produksi otomotif Korea turun, demand karet melemah sementara. Harga TSR20 tertekan. Beli dips untuk kontrak jangka panjang.",
-      "price_target": 1450,
-      "current_price": 1560
+      "id": "TND-2026-03",
+      "title": "Pengadaan Jagung Pipil 500 Ton - Feedmill Cikande",
+      "buyer_name": "PT Japfa Comfeed Tbk",
+      "volume_required": "500 Ton",
+      "budget_idr": 2125000000,
+      "deadline": "02 Agustus 2026",
+      "status": "Active",
+      "bids": 9,
+      "requirements": "Jagung Pipil Kering Pakan, KA <14%, Aflatoksin <20ppb, Pengiriman via Truk Tronton.",
+      "proposals": []
     }
-  ],
-  "domestic_intel": [
-    {
-      "province": "Jawa Barat",
-      "commodity": "Beras",
-      "status": "deficit",
-      "need_ton": 8000,
-      "surplus_ton": 0,
-      "trend": "up",
-      "price_avg": "Rp 14.800/kg",
-      "note": "Kemarau mengurangi produksi 18%. Harga naik steady."
-    },
-    {
-      "province": "Kalimantan Timur",
-      "commodity": "Bawang Merah",
-      "status": "deficit",
-      "need_ton": 600,
-      "surplus_ton": 0,
-      "trend": "up",
-      "price_avg": "Rp 41.000/kg",
-      "note": "Tidak ada produksi lokal. Pasokan dari NTB."
-    },
-    {
-      "province": "Sulawesi Selatan",
-      "commodity": "Jagung",
-      "status": "surplus",
-      "need_ton": 0,
-      "surplus_ton": 3200,
-      "trend": "down",
-      "price_avg": "Rp 3.900/kg",
-      "note": "Panen raya Maret. Stok berlimpah, harga tertekan."
-    },
-    {
-      "province": "NTT",
-      "commodity": "Beras",
-      "status": "deficit",
-      "need_ton": 2500,
-      "surplus_ton": 0,
-      "trend": "up",
-      "price_avg": "Rp 15.200/kg",
-      "note": "Daerah rawan pangan. Butuh distribusi dari Jatim."
-    },
-    {
-      "province": "DKI Jakarta",
-      "commodity": "Beras",
-      "status": "deficit",
-      "need_ton": 12000,
-      "surplus_ton": 0,
-      "trend": "up",
-      "price_avg": "Rp 15.500/kg",
-      "note": "Pusat konsumsi terbesar. Butuh pasokan rutin."
-    },
-    {
-      "province": "Aceh",
-      "commodity": "Kopi Arabika",
-      "status": "surplus",
-      "need_ton": 0,
-      "surplus_ton": 450,
-      "trend": "up",
-      "price_avg": "Rp 118.000/kg",
-      "note": "Panen raya. Buyer Eropa aktif mencari stock Gayo."
-    },
-    {
-      "province": "Lampung",
-      "commodity": "Lada Hitam",
-      "status": "surplus",
-      "need_ton": 0,
-      "surplus_ton": 280,
-      "trend": "up",
-      "price_avg": "Rp 62.000/kg",
-      "note": "Grade 1 tersedia banyak. Permintaan ekspor tinggi."
-    },
-    {
-      "province": "Riau",
-      "commodity": "Minyak Goreng",
-      "status": "surplus",
-      "need_ton": 0,
-      "surplus_ton": 12000,
-      "trend": "stable",
-      "price_avg": "Rp 14.800/kg",
-      "note": "Sentra CPO. Produksi minyak goreng sangat besar."
-    },
-    {
-      "province": "Jawa Timur",
-      "commodity": "Kedelai",
-      "status": "surplus",
-      "need_ton": 0,
-      "surplus_ton": 1800,
-      "trend": "stable",
-      "price_avg": "Rp 7.600/kg",
-      "note": "Produksi Malang dan Jember di atas target."
-    },
-    {
-      "province": "Papua",
-      "commodity": "Gula",
-      "status": "deficit",
-      "need_ton": 4500,
-      "surplus_ton": 0,
-      "trend": "up",
-      "price_avg": "Rp 17.500/kg",
-      "note": "Distribusi terbatas karena infrastruktur. Peluang besar."
-    }
-  ],
-  "reference_prices": [
-    {
-      "commodity_id": 1,
-      "name": "Beras Jasmine",
-      "unit": "ton",
-      "ref_usd": 910,
-      "ref_idr": 14420000,
-      "min_usd": 820,
-      "max_usd": 1050,
-      "source": "BPS + BMKG",
-      "last_updated": "2025-03-15",
-      "trend": [
-        850,
-        860,
-        875,
-        888,
-        900,
-        895,
-        905,
-        910,
-        908,
-        910
-      ],
-      "yoy_pct": 8.3
-    },
-    {
-      "commodity_id": 2,
-      "name": "Kopi Robusta",
-      "unit": "kg",
-      "ref_usd": 4.1,
-      "ref_idr": 65000,
-      "min_usd": 3.6,
-      "max_usd": 4.8,
-      "source": "ICE London + AEKI",
-      "last_updated": "2025-03-14",
-      "trend": [
-        3.7,
-        3.8,
-        3.85,
-        3.95,
-        4.0,
-        4.05,
-        4.0,
-        4.1,
-        4.08,
-        4.1
-      ],
-      "yoy_pct": 15.2
-    },
-    {
-      "commodity_id": 3,
-      "name": "CPO",
-      "unit": "ton",
-      "ref_usd": 892,
-      "ref_idr": 14138000,
-      "min_usd": 780,
-      "max_usd": 980,
-      "source": "MPOB Malaysia + Bursa",
-      "last_updated": "2025-03-15",
-      "trend": [
-        820,
-        835,
-        848,
-        860,
-        875,
-        870,
-        885,
-        890,
-        888,
-        892
-      ],
-      "yoy_pct": -1.8
-    },
-    {
-      "commodity_id": 4,
-      "name": "Kakao Fermentasi",
-      "unit": "ton",
-      "ref_usd": 3240,
-      "ref_idr": 51354000,
-      "min_usd": 2800,
-      "max_usd": 3600,
-      "source": "ICE Cocoa NY",
-      "last_updated": "2025-03-13",
-      "trend": [
-        2800,
-        2900,
-        3000,
-        3050,
-        3100,
-        3150,
-        3200,
-        3180,
-        3220,
-        3240
-      ],
-      "yoy_pct": 28.5
-    },
-    {
-      "commodity_id": 5,
-      "name": "Karet TSR20",
-      "unit": "ton",
-      "ref_usd": 1560,
-      "ref_idr": 24726000,
-      "min_usd": 1380,
-      "max_usd": 1750,
-      "source": "SICOM Singapore",
-      "last_updated": "2025-03-15",
-      "trend": [
-        1650,
-        1630,
-        1610,
-        1590,
-        1570,
-        1565,
-        1558,
-        1562,
-        1558,
-        1560
-      ],
-      "yoy_pct": -5.4
-    },
-    {
-      "commodity_id": 6,
-      "name": "Jagung Pipil",
-      "unit": "ton",
-      "ref_usd": 265,
-      "ref_idr": 4200750,
-      "min_usd": 230,
-      "max_usd": 310,
-      "source": "CBOT + BPS",
-      "last_updated": "2025-03-14",
-      "trend": [
-        240,
-        245,
-        248,
-        252,
-        258,
-        260,
-        263,
-        265,
-        264,
-        265
-      ],
-      "yoy_pct": 4.1
-    },
-    {
-      "commodity_id": 7,
-      "name": "Kopi Arabika Gayo",
-      "unit": "kg",
-      "ref_usd": 7.2,
-      "ref_idr": 114120,
-      "min_usd": 6.5,
-      "max_usd": 8.5,
-      "source": "SCA + AEKI Specialty",
-      "last_updated": "2025-03-12",
-      "trend": [
-        6.5,
-        6.7,
-        6.8,
-        6.9,
-        7.0,
-        7.05,
-        7.1,
-        7.15,
-        7.2,
-        7.2
-      ],
-      "yoy_pct": 21.4
-    },
-    {
-      "commodity_id": 8,
-      "name": "Lada Hitam",
-      "unit": "kg",
-      "ref_usd": 3.9,
-      "ref_idr": 61800,
-      "min_usd": 3.4,
-      "max_usd": 4.5,
-      "source": "IPC + AEKI",
-      "last_updated": "2025-03-14",
-      "trend": [
-        3.5,
-        3.55,
-        3.62,
-        3.7,
-        3.78,
-        3.8,
-        3.85,
-        3.88,
-        3.9,
-        3.9
-      ],
-      "yoy_pct": 9.7
-    },
-    {
-      "commodity_id": 9,
-      "name": "Kedelai",
-      "unit": "ton",
-      "ref_usd": 495,
-      "ref_idr": 7845000,
-      "min_usd": 440,
-      "max_usd": 560,
-      "source": "CBOT Chicago",
-      "last_updated": "2025-03-13",
-      "trend": [
-        470,
-        472,
-        478,
-        482,
-        488,
-        490,
-        492,
-        495,
-        494,
-        495
-      ],
-      "yoy_pct": -2.2
-    },
-    {
-      "commodity_id": 10,
-      "name": "Nikel Ore",
-      "unit": "ton",
-      "ref_usd": 15800,
-      "ref_idr": 250390000,
-      "min_usd": 14000,
-      "max_usd": 18000,
-      "source": "LME London",
-      "last_updated": "2025-03-15",
-      "trend": [
-        14500,
-        14800,
-        15000,
-        15200,
-        15500,
-        15600,
-        15700,
-        15800,
-        15750,
-        15800
-      ],
-      "yoy_pct": 11.8
-    },
-    {
-      "commodity_id": 11,
-      "name": "Udang Vaname",
-      "unit": "kg",
-      "ref_usd": 5.2,
-      "ref_idr": 82440,
-      "min_usd": 4.5,
-      "max_usd": 6.2,
-      "source": "GBCI + KKP",
-      "last_updated": "2025-03-10",
-      "trend": [
-        4.8,
-        4.9,
-        5.0,
-        5.1,
-        5.15,
-        5.2,
-        5.18,
-        5.2,
-        5.22,
-        5.2
-      ],
-      "yoy_pct": 7.1
-    },
-    {
-      "commodity_id": 12,
-      "name": "Gula Aren Organik",
-      "unit": "kg",
-      "ref_usd": 2.1,
-      "ref_idr": 33270,
-      "min_usd": 1.8,
-      "max_usd": 2.6,
-      "source": "FAO + APTINDO",
-      "last_updated": "2025-03-11",
-      "trend": [
-        1.9,
-        1.95,
-        2.0,
-        2.02,
-        2.05,
-        2.08,
-        2.1,
-        2.1,
-        2.09,
-        2.1
-      ],
-      "yoy_pct": 5.3
-    }
-  ],
-  "price_sources": [
-    {
-      "api_id": 1,
-      "api_name": "BPS Harga Konsumen",
-      "api_url": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/0000/var/2212",
-      "api_type": "commodity",
-      "auth_type": "query_param",
-      "api_key_masked": "****b3d9",
-      "query_param": "key",
-      "notes": "Harga konsumen BPS Indonesia. Update bulanan.",
-      "active": true,
-      "last_test_ok": true,
-      "last_test_at": "2025-03-15T08:00:00Z",
-      "response_count": 24,
-      "coverage": [
-        "Beras",
-        "Jagung",
-        "Kedelai",
-        "Lada"
-      ],
-      "latency_ms": 342,
-      "uptime_pct": 99.2
-    },
-    {
-      "api_id": 2,
-      "api_name": "ICE Futures Cocoa/Coffee",
-      "api_url": "https://api.worldcommodityprices.com/v1/commodities",
-      "api_type": "commodity",
-      "auth_type": "bearer",
-      "api_key_masked": "****f71c",
-      "notes": "Data real-time ICE New York & London. Covers Arabika, Robusta, Kakao.",
-      "active": true,
-      "last_test_ok": true,
-      "last_test_at": "2025-03-15T09:30:00Z",
-      "response_count": 12,
-      "coverage": [
-        "Kopi Arabika",
-        "Kopi Robusta",
-        "Kakao"
-      ],
-      "latency_ms": 185,
-      "uptime_pct": 99.8
-    },
-    {
-      "api_id": 3,
-      "api_name": "MPOB Malaysia CPO",
-      "api_url": "https://bepi.mpob.gov.my/index.php/en/statistics",
-      "api_type": "commodity",
-      "auth_type": "none",
-      "api_key_masked": "",
-      "notes": "Harga CPO resmi Malaysian Palm Oil Board. Gratis, scrape otomatis.",
-      "active": true,
-      "last_test_ok": true,
-      "last_test_at": "2025-03-14T14:00:00Z",
-      "response_count": 6,
-      "coverage": [
-        "CPO",
-        "PKO"
-      ],
-      "latency_ms": 520,
-      "uptime_pct": 94.5
-    },
-    {
-      "api_id": 4,
-      "api_name": "LME Nickel Spot",
-      "api_url": "https://api.lme.com/v2/metals/nickel/spot",
-      "api_type": "commodity",
-      "auth_type": "bearer",
-      "api_key_masked": "****aa12",
-      "notes": "London Metal Exchange. Harga spot & forward nikel, tembaga, timah.",
-      "active": true,
-      "last_test_ok": true,
-      "last_test_at": "2025-03-15T10:00:00Z",
-      "response_count": 4,
-      "coverage": [
-        "Nikel",
-        "Tembaga",
-        "Timah"
-      ],
-      "latency_ms": 210,
-      "uptime_pct": 99.9
-    },
-    {
-      "api_id": 5,
-      "api_name": "SICOM Rubber Singapore",
-      "api_url": "https://api.sgx.com/securities/v1.1/derivatives/commodities/rubber",
-      "api_type": "commodity",
-      "auth_type": "header",
-      "api_key_masked": "****c45e",
-      "header_name": "X-Api-Key",
-      "notes": "Singapore Commodity Exchange rubber futures. TSR20 & SMR20.",
-      "active": true,
-      "last_test_ok": false,
-      "last_test_at": "2025-03-12T11:00:00Z",
-      "response_count": 3,
-      "coverage": [
-        "Karet TSR20",
-        "Karet SMR20"
-      ],
-      "latency_ms": 890,
-      "uptime_pct": 87.3
-    },
-    {
-      "api_id": 6,
-      "api_name": "CBOT Grains Chicago",
-      "api_url": "https://data.nasdaq.com/api/v3/datasets/CHRIS/CME_C1.json",
-      "api_type": "commodity",
-      "auth_type": "query_param",
-      "api_key_masked": "****77df",
-      "query_param": "api_key",
-      "notes": "Chicago Board of Trade. Corn, Soybean, Wheat futures.",
-      "active": true,
-      "last_test_ok": true,
-      "last_test_at": "2025-03-15T07:00:00Z",
-      "response_count": 8,
-      "coverage": [
-        "Jagung",
-        "Kedelai",
-        "Gandum"
-      ],
-      "latency_ms": 298,
-      "uptime_pct": 98.1
-    },
-    {
-      "api_id": 7,
-      "api_name": "Open Exchange Rates",
-      "api_url": "https://openexchangerates.org/api/latest.json",
-      "api_type": "currency",
-      "auth_type": "query_param",
-      "api_key_masked": "****8821",
-      "query_param": "app_id",
-      "notes": "Kurs 170+ mata uang. Update tiap jam. Digunakan untuk konversi IDR/USD/EUR.",
-      "active": true,
-      "last_test_ok": true,
-      "last_test_at": "2025-03-15T10:30:00Z",
-      "response_count": 170,
-      "coverage": [
-        "USD",
-        "IDR",
-        "EUR",
-        "SGD",
-        "JPY",
-        "CNY",
-        "SAR",
-        "MYR",
-        "AUD"
-      ],
-      "latency_ms": 125,
-      "uptime_pct": 99.95
-    },
-    {
-      "api_id": 8,
-      "api_name": "Fixer.io Currency Backup",
-      "api_url": "https://data.fixer.io/api/latest",
-      "api_type": "currency",
-      "auth_type": "query_param",
-      "api_key_masked": "****3301",
-      "query_param": "access_key",
-      "notes": "Backup kurs mata uang. Aktif saat Open Exchange Rates down.",
-      "active": false,
-      "last_test_ok": null,
-      "last_test_at": null,
-      "response_count": 0,
-      "coverage": [
-        "EUR-based rates"
-      ],
-      "latency_ms": null,
-      "uptime_pct": 98.5
-    },
-    {
-      "api_id": 9,
-      "api_name": "KKP Harga Ikan & Udang",
-      "api_url": "https://statistik.kkp.go.id/api/v1/harga",
-      "api_type": "commodity",
-      "auth_type": "none",
-      "api_key_masked": "",
-      "notes": "Kementerian Kelautan dan Perikanan. Harga ikan & udang di sentra produksi.",
-      "active": true,
-      "last_test_ok": true,
-      "last_test_at": "2025-03-13T09:00:00Z",
-      "response_count": 18,
-      "coverage": [
-        "Udang Vaname",
-        "Udang Windu",
-        "Bandeng",
-        "Tongkol"
-      ],
-      "latency_ms": 440,
-      "uptime_pct": 91.2
-    }
-  ],
-  "price_health": [
-    {
-      "commodity": "Kopi Robusta",
-      "ref_usd": 4.1,
-      "avg_listing_usd": 4.28,
-      "min_listing": 3.8,
-      "max_listing": 4.9,
-      "listing_count": 8,
-      "diff_pct": 4.4,
-      "status": "fair",
-      "alert": null,
-      "trend": "up",
-      "variance": 0.22,
-      "outliers": 1
-    },
-    {
-      "commodity": "Beras Jasmine",
-      "ref_usd": 910,
-      "avg_listing_usd": 899,
-      "min_listing": 820,
-      "max_listing": 950,
-      "listing_count": 12,
-      "diff_pct": -1.2,
-      "status": "fair",
-      "alert": null,
-      "trend": "stable",
-      "variance": 38.5,
-      "outliers": 0
-    },
-    {
-      "commodity": "CPO",
-      "ref_usd": 892,
-      "avg_listing_usd": 895,
-      "min_listing": 870,
-      "max_listing": 920,
-      "listing_count": 5,
-      "diff_pct": 0.3,
-      "status": "fair",
-      "alert": null,
-      "trend": "stable",
-      "variance": 15.2,
-      "outliers": 0
-    },
-    {
-      "commodity": "Kakao Fermentasi",
-      "ref_usd": 3240,
-      "avg_listing_usd": 3520,
-      "min_listing": 3100,
-      "max_listing": 4200,
-      "listing_count": 4,
-      "diff_pct": 8.6,
-      "status": "overpriced",
-      "alert": "Harga rata-rata listing 8.6% di atas referensi ICE. 1 listing terdeteksi outlier (>$4.000/ton).",
-      "trend": "up",
-      "variance": 248,
-      "outliers": 1
-    },
-    {
-      "commodity": "Karet TSR20",
-      "ref_usd": 1560,
-      "avg_listing_usd": 1420,
-      "min_listing": 1350,
-      "max_listing": 1480,
-      "listing_count": 3,
-      "diff_pct": -9.0,
-      "status": "underpriced",
-      "alert": "Harga listing rata-rata 9% di bawah SICOM. Kemungkinan kualitas di bawah standar atau seller baru.",
-      "trend": "down",
-      "variance": 42.1,
-      "outliers": 0
-    },
-    {
-      "commodity": "Kopi Arabika Gayo",
-      "ref_usd": 7.2,
-      "avg_listing_usd": 7.5,
-      "min_listing": 6.8,
-      "max_listing": 8.2,
-      "listing_count": 3,
-      "diff_pct": 4.2,
-      "status": "fair",
-      "alert": null,
-      "trend": "up",
-      "variance": 0.42,
-      "outliers": 0
-    },
-    {
-      "commodity": "Lada Hitam",
-      "ref_usd": 3.9,
-      "avg_listing_usd": 3.85,
-      "min_listing": 3.6,
-      "max_listing": 4.1,
-      "listing_count": 2,
-      "diff_pct": -1.3,
-      "status": "fair",
-      "alert": null,
-      "trend": "up",
-      "variance": 0.18,
-      "outliers": 0
-    },
-    {
-      "commodity": "Nikel Ore",
-      "ref_usd": 15800,
-      "avg_listing_usd": 17500,
-      "min_listing": 16000,
-      "max_listing": 19000,
-      "listing_count": 2,
-      "diff_pct": 10.8,
-      "status": "overpriced",
-      "alert": "Harga 10.8% di atas LME spot. Cek sertifikasi kadar Ni — mungkin klaim kadar lebih tinggi.",
-      "trend": "up",
-      "variance": 1060,
-      "outliers": 1
-    },
-    {
-      "commodity": "Jagung Pipil",
-      "ref_usd": 265,
-      "avg_listing_usd": 261,
-      "min_listing": 245,
-      "max_listing": 275,
-      "listing_count": 6,
-      "diff_pct": -1.5,
-      "status": "fair",
-      "alert": null,
-      "trend": "stable",
-      "variance": 8.9,
-      "outliers": 0
-    },
-    {
-      "commodity": "Kedelai",
-      "ref_usd": 495,
-      "avg_listing_usd": 480,
-      "min_listing": 460,
-      "max_listing": 500,
-      "listing_count": 4,
-      "diff_pct": -3.0,
-      "status": "fair",
-      "alert": null,
-      "trend": "down",
-      "variance": 12.4,
-      "outliers": 0
-    }
-  ],
-  "admin_overview": {
-    "total_users": 2847,
-    "active_sellers": 612,
-    "total_stores": 418,
-    "products_listed": 2341,
-    "orders_this_month": 834,
-    "gmv_usd": 4218500,
-    "gmv_idr": 66863175000,
-    "escrow_held_usd": 182400,
-    "negotiations_active": 156,
-    "tenders_open": 23,
-    "alerts": [
-      {
-        "id": 1,
-        "type": "price",
-        "severity": "warning",
-        "msg": "Kakao Fermentasi: 1 listing terdeteksi overpriced >15% dari ref ICE",
-        "time": "2 jam lalu"
-      },
-      {
-        "id": 2,
-        "type": "api",
-        "severity": "error",
-        "msg": "SICOM Rubber API: Test gagal sejak 3 hari lalu — kurs karet tidak update",
-        "time": "3 hari lalu"
-      },
-      {
-        "id": 3,
-        "type": "fraud",
-        "severity": "warning",
-        "msg": "Toko baru 'Nikel Sulawesi' listing harga 28% di atas LME — perlu verifikasi",
-        "time": "5 jam lalu"
-      },
-      {
-        "id": 4,
-        "type": "volume",
-        "severity": "info",
-        "msg": "Volume tender bulan ini naik 42% YoY — 23 tender aktif",
-        "time": "Hari ini"
-      }
-    ]
-  }
+  ]
 }
